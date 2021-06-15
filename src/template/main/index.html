@@ -1,0 +1,914 @@
+@@include('../include/_head.html', {
+"page": "main"
+})
+<!-- 메인섹션 video css -->
+<link rel="stylesheet" href="http://static.ocean2you.co.kr/css/renew/main/player.css">
+</head>
+
+<body>
+    <h1 class="hidden">오션투유리조트 설악비치 호텔앤콘도</h1>
+
+    <div id="wrap">
+        <!-- 메인섹션 video -->
+        <div class="vid-wrap">
+            <section class="m-vid">
+                <video id="bgMov" playsinline="" webkit-playsinline="" preload="" autoplay="" muted="">
+                    <source src="http://img.ocean2you.co.kr/renew/movie_m/ocean2you_mobile.mp4" type="video/mp4">
+                </video>
+            </section>
+            <!--유튜브 비디오 부분-->
+            <!--[if !ie]>-->
+            <section class="bg-player-box">
+                <iframe id="player" class="video-pc"
+                    src="https://www.youtube.com/embed/xPx-uKiJucw?rel=0&enablejsapi=1&version3&playerapiid=ytplayer&autoplay=1&modestbranding=1&vq=hd1080"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </section>
+            <script>
+                //백그라운드 비디오 관련
+                $(document).ready(function () {
+                    playerSizeSet();
+
+                    //16초 뒤 사라짐
+                    setTimeout(function () {
+                        $(".bg-player-box").hide();
+                    }, 16000);
+
+                    //리사이즈시 작동
+                    $(window).resize(function () {
+                        playerSizeSet();
+                    })
+                });
+                let playerSizeSet = function () {
+                    let winW = $(window).width();
+                    let winH = $(window).height();
+                    if (winW < winH) {
+                        $(".video-pc").addClass("video-pc-vertical");
+                    }
+                    else {
+                        $(".video-pc").removeClass("video-pc-vertical");
+                    }
+                }
+            </script>
+            @@include('../include/_header.html')
+
+            <section class="main" id="main">
+                <div class="txt-box" id="txt-box">
+                    <img class="pc-img" src="http://img.ocean2you.co.kr/renew/main_txt_pc.png" alt="오션투유리조트 메인텍스트 pc">
+                    <img class="m-img" src="http://img.ocean2you.co.kr/renew/main_txt_m.png" alt="오션투유리조트 메인텍스트 m">
+
+                    <a href="javascript:;" class="more-a booking-a show-xs">
+                        <img class="cal" src="http://img.ocean2you.co.kr/renew/i_cal_2.png" alt="달력아이콘">
+                        객실예약
+                    </a>
+                </div>
+                <!-- 날씨 -->
+                <a href="javascript:;" class="weath-wrap">
+                    <div class="weath-box">
+                        <p class="weath-img">
+                            <img src="http://img.ocean2you.co.kr/renew/weather/cloud2.png" alt="날씨">
+                        </p>
+                        <p class="weath-txt">
+                            <span class="day">2018.02.27 (화)</span>
+                            <span class="location">오산날씨 : 구름많음</span>
+                        </p>
+                        <p class="tem-txt">
+                            <span class="tem-num">12</span>
+                            <span class="tem-cel">°C</span>
+                        </p>
+                    </div>
+                </a>
+                <!--//날씨 -->
+
+                <!-- 2021.06.01 스크롤다운 이미지 주석처리 -->
+                <!-- <div id="scr-box">
+                                <img src="http://img.ocean2you.co.kr/renew/i_mouse.png" alt="아래로스크롤하세요" class="nth-1">
+                                <img src="http://img.ocean2you.co.kr/renew/i_dArr.png" alt="아래로" class="nth-2">
+                                <img src="http://img.ocean2you.co.kr/renew/i_dArr.png" alt="아래로" class="nth-3">
+                            </div> -->
+                <!-- //2021.06.01 스크롤다운 이미지 주석처리 -->
+            </section>
+
+            <!-- 메인이벤트 팝업 -->
+            <div class="pop-event-room">
+                <div class="pop-event-area">
+                    <a href="http://ocean2you.co.kr/view/?package=onel" class="pop-box">
+                        <div class="pop-main">
+                            <img class="pc-img"
+                                src="http://img.ocean2you.co.kr/renew/event_pop/event_room_pop_main3.jpg"
+                                alt="룸타입 업글시,30% 객실할인, 객실 1일 + 1일 무료행사">
+                            <img class="m-img"
+                                src="http://img.ocean2you.co.kr/renew/event_pop/event_room_pop_main3_m.jpg"
+                                alt="룸타입 업글시,30% 객실할인, 객실 1일 + 1일 무료행사">
+                        </div>
+                    </a>
+
+                    <a href="http://ocean2you.co.kr/event/event_room2.php" class="pop-box">
+                        <div class="pop-main">
+                            <img class="pc-img" src="http://img.ocean2you.co.kr/renew/event_pop/event_review_pop.jpg"
+                                alt="오션투유 리뷰작성 이벤트, 후기 및 리뷰쓰면 아메리카노 2잔 증정">
+                            <img class="m-img" src="http://img.ocean2you.co.kr/renew/event_pop/event_review_pop_m.jpg"
+                                alt="오션투유 리뷰작성 이벤트, 후기 및 리뷰쓰면 아메리카노 2잔 증정">
+                        </div>
+                    </a>
+
+                    <a href="http://ocean2you.co.kr/event/event_blog.php" class="pop-box">
+                        <div class="pop-main">
+                            <img class="pc-img" src="http://img.ocean2you.co.kr/renew/event_pop/event_blog_pop.jpg"
+                                alt="블로거 포스팅 이벤트, 리노베이션오션뷰콘도 1일숙박 + 조식 2인권 제공">
+                            <img class="m-img" src="http://img.ocean2you.co.kr/renew/event_pop/event_blog_pop_m.jpg"
+                                alt="블로거 포스팅 이벤트, 리노베이션오션뷰콘도 1일숙박 + 조식 2인권 제공">
+                        </div>
+                    </a>
+
+                    <ul class="pop-btn-box-ul">
+                        <li class="not-today-box">
+                            <button type="button" class="btn-not-today">오늘 다시 열지 않음</button>
+                        </li>
+                        <li class="close-pop-box">
+                            <button type="button" class="btn-close-pop">닫기</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <script type="text/javascript"
+                src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+            <script>
+                $(document).ready(function () {
+                    //쿠키이름
+                    let cokieName = "pop_event_room";
+                    //오늘 다시 열지 않음 체크
+                    if ($.cookie(cokieName) != undefined) {
+                        $('.pop-event-room').hide();
+                    }
+                    //오늘 다시 열지 않음 버튼
+                    $(".pop-event-room .btn-not-today").on('click', function () {
+                        console.log("성공");
+                        addCookieData(cokieName);
+                        $('.pop-event-room').hide();
+                    });
+                    //닫기
+                    $(".pop-event-room .btn-close-pop").on('click', function () {
+                        $(".pop-event-room").hide();
+                    });
+                });
+
+                //쿠키데이터 등록
+                addCookieData = function (popName) {
+
+                    if ($.cookie(popName) == undefined) {
+                        console.log("작동")
+                        //초단위 테스트용
+                        // let date = new Date;
+                        // date.setTime(date.getTime() + 5*1000);
+
+                        let date = 1;//하루
+                        //쿠키가 없는 경우 쿠키를 추가
+                        $.cookie(popName, 'Y', { expires: date });
+                        //$.removeCookie('pop_liivemate');
+                    }
+                }
+
+            </script>
+
+            <div class="pop-event-room02">
+                <div class="pop-event-area">
+                    <!-- 2021.05.31 이벤트배너02 위치이동 -->
+                </div>
+            </div>
+            <div class="pop-event-room03">
+                <div class="pop-event-area">
+                </div>
+            </div>
+            <!-- //메인이벤트 팝업 -->
+            <script type="text/javascript"
+                src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+            <script>
+                $(document).ready(function () {
+
+                    //쿠키이름
+                    let cokieName = "pop_event_room02";
+
+                    //오늘 다시 열지 않음 체크
+                    if ($.cookie(cokieName) != undefined) {
+                        $('.pop-event-room02').hide();
+                    }
+
+                    //오늘 다시 열지 않음 버튼
+                    $(".pop-event-room .btn-not-today").on('click', function () {
+                        console.log("성공");
+                        addCookieData(cokieName);
+                        $('.pop-event-room02').hide();
+                    });
+
+                    //닫기
+                    $(".pop-event-room02 .btn-close-pop").on('click', function () {
+                        $(".pop-event-room02").hide();
+                    });
+
+
+
+                });
+
+                //쿠키데이터 등록
+                addCookieData = function (popName) {
+
+                    if ($.cookie(popName) == undefined) {
+                        console.log("작동")
+                        //초단위 테스트용
+                        // let date = new Date;
+                        // date.setTime(date.getTime() + 5*1000);
+
+                        let date = 1;//하루
+                        //쿠키가 없는 경우 쿠키를 추가
+                        $.cookie(popName, 'Y', { expires: date });
+                        //$.removeCookie('pop_liivemate');
+                    }
+                }
+
+            </script>
+        </div>
+        <!-- //메인섹션 video -->
+
+        <!-- 모바일: 아고다 인증 배너 -->
+        <section class="sect-agoda">
+            <div class="sect-area">
+                <div class="agoda-box btn-open-agoda">
+                    <img src="http://img.ocean2you.co.kr/renew/pop/m_pop_agoda_gold.jpg" alt="아고다 이미지">
+                </div>
+            </div>
+        </section>
+        <!-- //모바일: 아고다 인증 배너 -->
+
+        <section class="intro" id="setTop">
+            <div class="container">
+
+                <div class="colth-1">
+                    <div class="mg-"></div>
+                    <h2>
+                        <span class="f-bd">별빛이 쏟아지는</span><br>
+                        오션투유 리조트
+                    </h2>
+                    <p class="p0">
+                        반짝이는 하얀 백사장 위로 매일 밤<br>
+                        쏟아지는 별빛을 볼 수 있는 오션투유 리조트 </p>
+                    <a href="http://ocean2you.co.kr/intro/#intro_pro" class="more-a">자세히보기<img
+                            src="http://img.ocean2you.co.kr/renew/i_rArr.png" alt="더보기" class="i-rArr"></a>
+                </div>
+                <div class="colth-2 clr">
+                    <div class="nth-1 clr">
+                        <img src="http://img.ocean2you.co.kr/renew/intro_01.jpg" alt="하얀백사장에보물같은조개" class="img-1">
+                        <p class="p0">
+                            반짝거리는 하얀 백사장에서<br>
+                            만날수 있는 보물같은 조개
+                        </p>
+                        <a href="http://ocean2you.co.kr/intro/?go_scroll=intro_etc1" class="more-a">자세히보기</a>
+                    </div>
+                    <div class="nth-2 clr">
+                        <img src="http://img.ocean2you.co.kr/renew/intro_02.jpg" alt="탁트인해안선과환상적인뷰" class="img-1">
+                        <p class="p0">
+                            탁트인 해안선과<br>
+                            별빛이 쏟아지는 환상적인 뷰
+                        </p>
+                        <a href="http://ocean2you.co.kr/intro/?go_scroll=intro_etc2" class="more-a">자세히보기</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="package">
+            <div class="in-bg">
+                <div class="container">
+                    <div class="in-tit">
+                        <div class="mg-"></div>
+                        <h2>OCEAN2YOU <span class="f-bd">PACKAGE</span></h2>
+                        <p class="p0">가족, 친구, 연인과 함께 할 수 다양한 패키지로 즐기는 오션투유 리조트</p>
+                    </div>
+
+                    <ul class="pkg-list clr">
+                        <li class="nth-1">
+                            <img src="http://img.ocean2you.co.kr/renew/package_01_1.jpg" alt="조식뷔페 다연" class="bgImg">
+                            <div class="in-cont">
+                                <div class="mg-"></div>
+                                <h3>조식뷔페 다연</h3>
+                                <p class="p0">
+                                    다채로운 조식 뷔페, 계절 모듬물회,<br>
+                                    신선하고 다양한 계절 모듬회
+                                </p>
+                                <a href="http://ocean2you.co.kr/package/?type=dining&pack_go=1" class="more-a">자세히보기</a>
+                            </div>
+                        </li>
+                        <li class="nth-2">
+                            <img src="http://img.ocean2you.co.kr/renew/package_02_1.jpg" alt="오션숯불갈비" class="bgImg">
+                            <div class="in-cont">
+                                <div class="mg-"></div>
+                                <h3>오션숯불갈비</h3>
+                                <p class="p0">
+                                    소나무 숲 향기와 바다를 바라보며<br>
+                                    즐기는 바베큐의 매력
+                                </p>
+                                <a href="http://ocean2you.co.kr/package/?type=dining&pack_go=2" class="more-a">자세히보기</a>
+                            </div>
+                        </li>
+                        <li class="nth-3">
+                            <img src="http://img.ocean2you.co.kr/renew/package_03_1.jpg" alt="속초 횟집" class="bgImg">
+                            <div class="in-cont">
+                                <div class="mg-"></div>
+                                <h3>속초 횟집</h3>
+                                <p class="p0">
+                                    동해의 신선함을 그대로 즐길 수<br>
+                                    있는 속초 횟집
+                                </p>
+                                <a href="http://ocean2you.co.kr/package/?type=dining&pack_go=3" class="more-a">자세히보기</a>
+                            </div>
+                        </li>
+                        <li class="nth-4">
+                            <img src="http://img.ocean2you.co.kr/renew/package_04_1.jpg" alt="전동바이크" class="bgImg">
+                            <div class="in-cont">
+                                <div class="mg-"></div>
+                                <h3>전동바이크</h3>
+                                <p class="p0">
+                                    시원하게 탁트인 해안가를 달리는<br>
+                                    전동바이크 패키지
+                                </p>
+                                <a href="http://ocean2you.co.kr/package/?pack_go=3" class="more-a">자세히보기</a>
+                            </div>
+                        </li>
+                        <li class="nth-5">
+                            <img src="http://img.ocean2you.co.kr/renew/package_05.jpg" alt="룸서비스" class="bgImg">
+                            <div class="in-cont">
+                                <div class="mg-"></div>
+                                <h3>룸서비스</h3>
+                                <p class="p0">
+                                    빠르고 신선한 음식을 바로 즐길 수<br>
+                                    있는 오션투유만의 룸서비스
+                                </p>
+                                <a href="http://ocean2you.co.kr/package/?pack_go=5" class="more-a">자세히보기</a>
+                            </div>
+                        </li>
+                        <li class="nth-6">
+                            <img src="http://img.ocean2you.co.kr/renew/package_09.jpg" alt="낚시도구 대여" class="bgImg">
+                            <div class="in-cont">
+                                <div class="mg-"></div>
+                                <h3>낚시도구 대여</h3>
+                                <p class="p0">
+                                    여기 주변은 모두 최고의 낚시포인트<br>
+                                    동해바다는 역시 낚시
+                                </p>
+                                <a href="http://ocean2you.co.kr/package/?pack_go=9" class="more-a">자세히보기</a>
+                            </div>
+                        </li>
+                        <li class="nth-7">
+                            <img src="http://img.ocean2you.co.kr/renew/package_07.jpg" alt="조개캐기" class="bgImg">
+                            <div class="in-cont">
+                                <div class="mg-"></div>
+                                <h3>조개캐기</h3>
+                                <p class="p0">
+                                    은빛 해변에서 즐기는 보물찾기<br>
+                                    조개캐기 패키지
+                                </p>
+                                <a href="http://ocean2you.co.kr/package/?pack_go=11" class="more-a">자세히보기</a>
+                            </div>
+                        </li>
+                        <li class="nth-8">
+                            <img src="http://img.ocean2you.co.kr/renew/package_08.jpg" alt="불꽃놀이" class="bgImg">
+                            <div class="in-cont">
+                                <div class="mg-"></div>
+                                <h3>불꽃놀이</h3>
+                                <p class="p0">
+                                    밤 하늘을 가득 물들이는 찬란한<br>
+                                    불꽃놀이 패키지
+                                </p>
+                                <a href="http://ocean2you.co.kr/package/?pack_go=10" class="more-a">자세히보기</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!--<section class="tourist" id="tourist">
+	<div class="container">
+		<div class="in-tit">
+			<h2>주변관광지</h2>
+			<p class="p0">강원도 설악, 속초, 고성에 위치한 오션투유 리조트 주변 관광지안내</p>
+		</div>
+		
+		<ul class="tour-list clr">
+			<li class="nth-1">
+				<img src="http://img.ocean2you.co.kr/renew/tourist_01.jpg" alt="건봉사" class="bgImg">
+				<a href="javascript:;">
+					<h3>건봉사</h3>
+					<div class="mg-"></div>
+					<p class="p0">
+						<span class="s0">
+							 부처님 진신치아사리 모셔진,<br>
+							호국불교의 본산
+						</span>
+						설악산 신흥사, 백담사등 9개 말사(末寺)를<br>
+						거느렸던 전국 4대 사찰 중 한곳으로<br>
+						신라 법흥왕(서기520년)때 지어진<br>
+						오랜 사찰입니다
+					</p>
+				</a>
+			</li>
+			<li class="nth-2">
+				<img src="http://img.ocean2you.co.kr/renew/tourist_02.jpg" alt="삼포해수욕장" class="bgImg">
+				<a href="javascript:;">
+					<h3>삼포해수욕장</h3>
+					<div class="mg-"></div>
+					<p class="p0">
+						<span class="s0">은빛 백사장이 아름다운 해수욕장</span>
+						강원도고성군에 위치한 삼포 해수욕장은<br>
+						깨끗한 백사장, 울창한 송림을 지닌<br>
+						국민관광지로 유명한 곳입니다
+					</p>
+				</a>
+			</li>
+			<li class="nth-3-1">
+				<img src="http://img.ocean2you.co.kr/renew/tourist_03_01.jpg" alt="설악" class="bgImg">
+				<a href="http://ocean2you.co.kr/view/?go_scroll=info_box5">
+					<h3>설악워터피아</h3>
+					<div class="mg-"></div>
+					<p class="p0">
+						100% 천연 온천수로 즐기는<br>
+						온천 테마파크!<br>
+						오션투유 리조트 예약시 할인권 제공!<br>
+						<span href="" class="more-a">자세히보기</span>
+					</p>
+				</a>
+			</li>
+			<li class="nth-4">
+				<img src="http://img.ocean2you.co.kr/renew/tourist_04.jpg" alt="송지호" class="bgImg">
+				<a href="javascript:;">
+					<h3>송지호</h3>
+					<div class="mg-"></div>
+					<p class="p0">
+						<span class="s0">둘레길 따라 걸으며 호수의 여유를 만끽!</span>
+						둘레가 4km에 약 20만평 넓이의<br>
+						대자연호수로 울창한 송림과 함께 물빛이<br>
+						청명하고 수심이 일정하며 많은 어족들이<br>
+						서식하기에 적합한 곳으로 유명합니다.
+					</p>
+				</a>
+			</li>
+			<li class="nth-5">
+				<img src="http://img.ocean2you.co.kr/renew/tourist_05.jpg" alt="청초호" class="bgImg">
+				<a href="javascript:;">
+					<h3>청초호</h3>
+					<div class="mg-"></div>
+					<p class="p0">
+						<span class="s0">속초시 야경이 아름다운 청초호</span>
+						강원도 속초시는 석호인 청초호를 중심으로<br>
+						형성되어 있으며, 속초시내와 설악산이<br>
+						한눈에 펼쳐져 수려한 속초의 풍경을<br>
+						감상하시기 좋습니다.
+					</p>
+				</a>
+			</li>
+			<li class="nth-6">
+				<img src="http://img.ocean2you.co.kr/renew/tourist_06.jpg" alt="천학정" class="bgImg">
+				<a href="javascript:;">
+					<h3>천학정</h3>
+					<div class="mg-"></div>
+					<p class="p0">
+						<span class="s0">노송과 깍아지른 듯한 해안절벽위의 선경</span>
+						동해바다의 신비를 고스란히 간직하고 있는<br>
+						천혜의 기암괴석과 깍아지른 듯한 해안 절벽위에<br>
+						건립되어 경치가 아름다운 곳입니다
+					</p>
+				</a>
+			</li>
+			<li class="nth-7">
+				<img src="http://img.ocean2you.co.kr/renew/tourist_07.jpg" alt="설악산" class="bgImg">
+				<a href="javascript:;">
+					<h3>설악산 비선대</h3>
+					<div class="mg-"></div>
+					<p class="p0">
+						<span class="s0">
+							선녀가 하늘로 올라갔다는 비선대에서<br>
+							바라보는 금강굴 절경
+						</span>
+						비선대코스는 선녀가 하늘로 올라갔다하여<br>
+						그만큼 아름다운 전경을 탐방할 수 있는<br>
+						약 3.0km 구간으로 시간은<br>
+						편도 약 1시간 정도 소요됩니다.
+					</p>
+				</a>
+			</li>
+			<li class="nth-3">
+				<img src="http://img.ocean2you.co.kr/renew/tourist_03.jpg" alt="화암사" class="bgImg">
+				<a href="javascript:;">
+					<h3>화암사</h3>
+					<div class="mg-"></div>
+					<p class="p0">
+						<span class="s0">신선봉 아래, 벼에 관한 전설 얽힌 화암사</span>
+						미시령의 울산바위, 수바위 신선봉이<br>
+						어우러져 빚어내는 화암사 주변의<br>
+						가을단풍은 아름다움의 극치를 이룹니다
+					</p>
+				</a>
+			</li>
+			<li class="">
+				<img src="http://img.ocean2you.co.kr/renew/tourist_09.jpg" alt="설악야구장" class="bgImg">
+				<a href="javascript:;">
+					<h3>설악야구장</h3>
+					<div class="mg-"></div>
+					<p class="p0">
+						<span class="s0">강원 야구인들의 메카</span>
+						속초종합운동장에 위치한 고교야구및 사회인야구경기를 개최하는 야구장입니다.
+					</p>
+				</a>
+			</li>
+			<li class="">
+				<img src="http://img.ocean2you.co.kr/renew/tourist_10.jpg" alt="죽왕공설운동장" class="bgImg">
+				<a href="javascript:;">
+					<h3>죽왕공설운동장</h3>
+					<div class="mg-"></div>
+					<p class="p0">
+						<span class="s0">강원 체육인을 위한 성지</span>
+						고성 죽왕면에 위치해 축구, 야구, 족구 등의 다목적 스포츠를 즐길 수 있습니다.
+					</p>
+				</a>
+			</li>
+			<li class="">
+				<img src="http://img.ocean2you.co.kr/renew/tourist_11.jpg" alt="고성군 종합운동장" class="bgImg">
+				<a href="javascript:;">
+					<h3>고성군 종합운동장</h3>
+					<div class="mg-"></div>
+					<p class="p0">
+						<span class="s0">강원의 다목적 종합스포츠 시설</span>
+						관람객 8천석 규모, 축구장, 육상트랙부터 육상경기장 까지 갖춰진 최고의 스포츠 시설입니다.
+					</p>
+				</a>
+			</li>
+			<li class="">
+				<img src="http://img.ocean2you.co.kr/renew/tourist_12.jpg" alt="거진 공설운동장" class="bgImg">
+				<a href="javascript:;">
+					<h3>거진 공설운동장</h3>
+					<div class="mg-"></div>
+					<p class="p0">
+						<span class="s0">중소규모의 멀티형 스포츠 시설</span>
+						관람석 1천석, 축구장 2면, 다목적 구장 1면, 풋살구장 1면, 족구/배구장 1면이 있어 다양한 스포츠가 가능합니다.
+					</p>
+				</a>
+			</li>
+
+			<!--<li class="lst">
+				<img src="http://img.ocean2you.co.kr/renew/tourist_more.jpg" alt="더보기" class="bgImg">
+								<a href="http://ocean2you.co.kr/view/?go_scroll=info_box5">
+					<h3 class="hidden">더보기</h3>
+				</a>
+			</li>
+			
+		</ul>
+	</div>
+</section>-->
+
+        <section class="facil">
+            <div class="container">
+                <div class="in-tit">
+                    <h2>시설안내</h2>
+                    <p class="p0">강원도 설악, 속초, 고성에 위치한 오션투유 리조트 시설안내</p>
+                </div>
+
+                <div class="bxList nth-1 clr" id="bxList-1">
+                    <div class="bxBox nth-1" onclick="location.href='http://ocean2you.co.kr/facil/?facil_go=room_1'"
+                        style="cursor:pointer">
+                        <ul class="bxS-1">
+                            <li><img src="http://img.ocean2you.co.kr/renew/facil_01.jpg" alt="오션투유 콘도" /></li>
+                        </ul>
+                        <div class="txt-box">
+                            <p class="p0">오션투유 콘도</p>
+                            <a href="http://ocean2you.co.kr/facil/?facil_go=room_1" class="more-a">자세히보기</a>
+                        </div>
+                    </div>
+                    <div class="bxBox nth-2" onclick="location.href='http://ocean2you.co.kr/facil/?facil_go=room_1'"
+                        style="cursor:pointer">
+                        <ul class="bxS-2">
+                            <li><img src="http://img.ocean2you.co.kr/renew/facil_02.jpg" alt="오션투유 리노베이션 콘도/호텔" /></li>
+                        </ul>
+                        <div class="txt-box">
+                            <p class="p0">오션투유 콘도</p>
+                            <a href="http://ocean2you.co.kr/facil/?facil_go=room_1" class="more-a">자세히보기</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bxList nth-2 clr">
+                    <div class="bxBox nth-1" onclick="location.href='http://ocean2you.co.kr/facil/?facil_go=etc_1'"
+                        style="cursor:pointer">
+                        <img class="bgImg" src="http://img.ocean2you.co.kr/renew/facil_03.jpg" alt="오션투유 콘도" />
+                        <div class="txt-box">
+                            <p class="p0">조식뷔페 다연</p>
+                            <a href="http://ocean2you.co.kr/facil/?facil_go=etc_1" class="more-a">자세히보기</a>
+                        </div>
+                    </div>
+                    <div class="bxBox nth-2" onclick="location.href='http://ocean2you.co.kr/facil/?facil_go=etc_2'"
+                        style="cursor:pointer">
+                        <img class="bgImg" src="http://img.ocean2you.co.kr/renew/facil_04.jpg" alt="오션투유 콘도" />
+                        <div class="txt-box">
+                            <p class="p0">카페 라바짜</p>
+                            <a href="http://ocean2you.co.kr/facil/?facil_go=etc_2" class="more-a">자세히보기</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bxList nth-3 clr" style="cursor:pointer">
+                    <div class="bxBox nth-1" onclick="location.href='http://ocean2you.co.kr/facil/?facil_go=etc_4'">
+                        <img class="bgImg" src="http://img.ocean2you.co.kr/renew/facil_05.jpg" alt="오션투유 콘도" />
+                        <div class="txt-box">
+                            <p class="p0">GS편의점</p>
+                            <a href="http://ocean2you.co.kr/facil/?facil_go=etc_4" class="more-a">자세히보기</a>
+                        </div>
+                    </div>
+                    <div class="bxBox nth-2" onclick="location.href='http://ocean2you.co.kr/facil/?facil_go=etc_3'"
+                        style="cursor:pointer">
+                        <img class="bgImg" src="http://img.ocean2you.co.kr/renew/facil_06.jpg" alt="오션투유 콘도" />
+                        <div class="txt-box">
+                            <p class="p0">바베큐장</p>
+                            <a href="http://ocean2you.co.kr/facil/?facil_go=etc_3" class="more-a">자세히보기</a>
+                        </div>
+                    </div>
+                    <div class="bxBox nth-3" onclick="location.href='http://ocean2you.co.kr/facil/?facil_go=etc_5'"
+                        style="cursor:pointer">
+                        <img class="bgImg" src="http://img.ocean2you.co.kr/renew/facil_07.jpg" alt="오션투유 콘도" />
+                        <div class="txt-box">
+                            <p class="p0">연회장</p>
+                            <a href="http://ocean2you.co.kr/facil/?facil_go=etc_5" class="more-a">자세히보기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="wayto" id="wayto">
+            <div class="container">
+                <div class="in-tit">
+                    <h2>오시는길</h2>
+                    <p class="p0">강원도 설악, 속초, 고성에 위치한 오션투유 리조트 위치안내</p>
+                </div>
+                <div class="map-box clr">
+                    <!--<a href="javascript:;" onclick="$('#pop-bustour').show()">
+				<img src="http://img.ocean2you.co.kr/renew/bt_waytobus_m.jpg" alt="속초버스투어자세히보기" class="show-xs wd-f">
+				<img src="http://img.ocean2you.co.kr/renew/bt_waytobus.jpg" alt="속초버스투어자세히보기" class="hidden-xs">
+			</a>-->
+                    <div class="map" id="map"></div>
+                    <script type="text/javascript"
+                        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=98cdb52e74906d02a07b05e45ef49770"></script>
+                    <script>
+                        var container = document.getElementById('map');
+                        var options = {
+                            center: new daum.maps.LatLng(38.317139, 128.531006),
+                            level: 4,
+                            //draggable: false,
+                            //disableDoubleClickZoom :true//확대막는거
+                        };
+
+                        var map = new daum.maps.Map(container, options);
+                        // 마우스 휠과 모바일 터치를 이용한 지도 확대, 축소를 막는다
+                        map.setZoomable(false);
+
+                        // 지도에 확대 축소 컨트롤을 생성한다
+                        var zoomControl = new daum.maps.ZoomControl();
+
+                        // 지도의 우측에 확대 축소 컨트롤을 추가한다
+                        map.addControl(zoomControl, daum.maps.ControlPosition.RIGHT);
+
+                        // 지도에 마커를 생성하고 표시한다
+                        var marker = new daum.maps.Marker({
+                            position: new daum.maps.LatLng(38.317139, 128.531006), // 마커의 좌표
+                            map: map // 마커를 표시할 지도 객체
+                        });
+                        // 마커 위에 표시할 인포윈도우를 생성한다
+                        var infowindow = new daum.maps.InfoWindow({
+                            content: '<div style="text-align:center; font-size:11px; padding:5px;">오션투유리조트 호텔앤콘도</div>' // 인포윈도우에 표시할 내용
+                        });
+
+                        // 인포윈도우를 지도에 표시한다
+                        infowindow.open(map, marker);
+                    </script>
+                    <!-- <div class="map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3130.3620469800658!2d128.52880931560614!3d38.31744607966428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5fd894b74d5ee2c3%3A0xf978c9441b2a53bd!2z7Jik7IWYIO2IrOycoCDrpqzsobDtirgg7ISk7JWF67mE7LmYIO2YuO2FlCDslaQg7L2Y64-E!5e0!3m2!1sko!2skr!4v1503997101294" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</div> -->
+                    <!--171115 내용 수정-->
+                    <div class="mapExp">
+                        <p class="p0">자가 차량 이용시</p>
+                        <p class="p1">네비게이션 주소 또는 오션투유 리조트 입력</p>
+                        <p class="p0">대중교통 이용시</p>
+                        <p class="p1"><span class="f-bd">간성시외버스터미널 하차시</span> - 신안리 정류장에서 1번, 1-1 버스 승차, <span
+                                class="lg-block">삼포리정류장에서 하차, 105m 이동 <a class="wayBtn" href="http://dmaps.kr/6x66r"
+                                    target="_blank"><img src="http://img.ocean2you.co.kr/renew/wayto_btn.jpg"
+                                        alt="길찾기"></a></span></p>
+                        <p class="p1"><span class="f-bd">속초시외버스터미널 하차시</span> - 한국전력 정류장에서 1번, 1-1번 버스 승차, <span
+                                class="lg-block">삼포리정류장에서 하차, 105m 이동 <a class="wayBtn" href="http://dmaps.kr/6x67i"
+                                    target="_blank"><img src="http://img.ocean2you.co.kr/renew/wayto_btn.jpg"
+                                        alt="길찾기"></a></span></p>
+                        <p class="p1"><span class="f-bd">속초고속버스터미널 하차시</span> - 속초 고속버스터미널 정류장 1번. <span
+                                class="lg-block">1-1번 버스 승차, 삼포리정류장에서 하차, 105m 이동 <a class="wayBtn"
+                                    href="http://dmaps.kr/6x2av" target="_blank"><img
+                                        src="http://img.ocean2you.co.kr/renew/wayto_btn.jpg" alt="길찾기"></a></span></p>
+                    </div>
+                </div>
+                <!-- <div class="map-box clr">
+		
+		
+			<div class="map">
+			<div id="daumRoughmapContainer1504745281450" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+			<script charset="UTF-8" class="daum_roughmap_loader_script" src="http://dmaps.daum.net/map_js_init/roughmapLoader.js"></script>
+		
+			<script charset="UTF-8">
+			new daum.roughmap.Lander({
+					"timestamp" : "1504745281450",
+					"key" : "ji6p"
+				}).render();
+			</script>
+		
+			</div> -->
+
+
+                <!--<div class="map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3130.3620469800658!2d128.52880931560614!3d38.31744607966428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5fd894b74d5ee2c3%3A0xf978c9441b2a53bd!2z7Jik7IWYIO2IrOycoCDrpqzsobDtirgg7ISk7JWF67mE7LmYIO2YuO2FlCDslaQg7L2Y64-E!5e0!3m2!1sko!2skr!4v1503997101294" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</div> 
+
+			<div class="mapExp">
+				<p class="p0">자가 차량 이용시</p>
+				<p class="p1">네비게이션 주소 또는 오션투유 리조트 입력</p>
+				<p class="p1"><span class="f-bd">주소</span> : 강원 고성군 죽왕면 삼포해변길 9</p>
+				<p class="p0">대중교통 이용시</p>
+				<p class="p1"><span class="f-bd">간성시외버스터미널 하차시</span> - 신안리 정류장에서 1번, 1-1 버스 승차, 삼포리정류장에서 하차, 105m 이동</p>
+				<p class="p1"><span class="f-bd">속초시외버스터미널 하차시</span> - 한국전력 정류장에서 1번, 1-1번 버스 승차, 삼포리정류장 하차, 105m 이동</p>
+				<p class="p1"><span class="f-bd">속초고속버스터미널 하차시</span> - 속초 고속버스터미널 정류장에서 1번. 1-1번 버스 승차, 삼포리정류장 하차, 105m 이동</p>
+			</div> -->
+
+                <!--<div class="map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3130.3620469800658!2d128.52880931560614!3d38.31744607966428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5fd894b74d5ee2c3%3A0xf978c9441b2a53bd!2z7Jik7IWYIO2IrOycoCDrpqzsobDtirgg7ISk7JWF67mE7LmYIO2YuO2FlCDslaQg7L2Y64-E!5e0!3m2!1sko!2skr!4v1503997101294" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</div>-->
+
+                <!--<div class="map" id="map">
+			</div>
+
+			<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=iS2imTtWDdHeYEPBo4Lq"></script>
+			<script type="text/javascript">
+				var oMarkerParam = new Array();
+				var oPoint = new naver.maps.LatLng('38.3170019', '128.5309772');
+				var omap = new naver.maps.Map('map',{
+					center : oPoint,
+					zoom : 10,
+					scrollWheel: false,
+					scaleControl:true,
+				});
+
+				var oSize = new naver.maps.Size(28, 37);
+				var oOffset = new naver.maps.Size(14, 37);
+				var oMarker = new naver.maps.Marker({
+					map: omap,
+					position: oPoint,
+					icon: {
+						url: 'http://static.naver.net/maps/v3/pin_default.png',
+						size: oSize,
+						anchor: oOffset
+					},
+					zIndex: 99999
+				});
+
+				</script>-->
+                <!-- 	<div class="mapExp">
+				<p class="p0">자가 차량 이용시</p>
+				<p class="p1">네비게이션 주소 또는 오션투유 리조트 입력</p>
+				<p class="p0">대중교통 이용시</p>
+			
+				<p class="p1"><span class="f-bd">간성시외버스터미널 하차시</span> - 신안리 정류장에서 1번, 1-1 버스 승차, <span class="lg-block">삼포리정류장에서 하차, 105m 이동 <a class="wayBtn" href="http://naver.me/FRduF8Ob" target="_blank"><img src="http://img.ocean2you.co.kr/renew/wayto_btn.jpg" alt="길찾기"></a></span></p>
+				<p class="p1"><span class="f-bd">속초시외버스터미널 하차시</span> - 한국전력 정류장에서 1번, 1-1번 버스 승차, <span class="lg-block">삼포리정류장에서 하차, 105m 이동 <a class="wayBtn" href="http://naver.me/FogIFqCB" target="_blank"><img src="http://img.ocean2you.co.kr/renew/wayto_btn.jpg" alt="길찾기"></a></span></p>
+				<p class="p1"><span class="f-bd">속초고속버스터미널 하차시</span> - 속초 고속버스터미널 정류장 1번. <span class="lg-block">1-1번 버스 승차, 삼포리정류장에서 하차, 105m 이동 <a class="wayBtn" href="http://naver.me/5vW3rzjk" target="_blank"><img src="http://img.ocean2you.co.kr/renew/wayto_btn.jpg" alt="길찾기"></a></span></p>
+				
+				<p class="p1"><span class="f-bd">간성시외버스터미널 하차시</span> - 신안리 정류장에서 1번, 1-1 버스 승차, <span class="lg-block">삼포리정류장에서 하차, 105m 이동 <a class="wayBtn" href="http://dmaps.kr/6x66r" target="_blank"><img src="http://img.ocean2you.co.kr/renew/wayto_btn.jpg" alt="길찾기"></a></span></p>
+				<p class="p1"><span class="f-bd">속초시외버스터미널 하차시</span> - 한국전력 정류장에서 1번, 1-1번 버스 승차, <span class="lg-block">삼포리정류장에서 하차, 105m 이동 <a class="wayBtn" href="http://dmaps.kr/6x67i" target="_blank"><img src="http://img.ocean2you.co.kr/renew/wayto_btn.jpg" alt="길찾기"></a></span></p>
+				<p class="p1"><span class="f-bd">속초고속버스터미널 하차시</span> - 속초 고속버스터미널 정류장 1번. <span class="lg-block">1-1번 버스 승차, 삼포리정류장에서 하차, 105m 이동 <a class="wayBtn" href="http://dmaps.kr/6x2av" target="_blank"><img src="http://img.ocean2you.co.kr/renew/wayto_btn.jpg" alt="길찾기"></a></span></p>
+			</div>
+					</div> -->
+            </div>
+        </section>
+
+        <!-- 2021.06.02 주차장 섹션추가 -->
+        <section class="parking" id="parking">
+            <div class="container">
+                <div class="in-tit">
+                    <h2>주차안내</h2>
+                    <p class="p0">자기차량으로 방문하시는 고객님을 위한 주차장 이용안내</p>
+                </div>
+
+                <div class="info-box">
+                    <figure>
+                        <img class="pc-img" src="http://img.ocean2you.co.kr/renew/parking_pc.jpg"
+                            alt="오션투유리조트 주차장 주차안내 pc이미지">
+                        <img class="m-img" src="http://img.ocean2you.co.kr/renew/parking_m.jpg"
+                            alt="오션투유리조트 주차장 주차안내 m이미지">
+                    </figure>
+
+                    <div class="parking-info">
+                        <p class="tit">주차장 이용안내</p>
+                        <p>
+                            주차는 오션투유의 ①주차장과 간이주차장을 중심으로 이용해 주십시오.<br>
+                            차량의 만차상황에 따라 ②,③,④공용주차장을 이용하실 수도 있습니다.
+                        </p>
+                        <p class="info-notice">
+                            단, 여름성수기 7~8월에는 ②,③,④주차장이 유료로 운영됩니다.<br>
+                            성수기 투숙손님께서는 반드시 ①주차장을 먼저 방문하신 후 무료주차 스티커 교부와 주차안내를 받으시기 바랍니다.
+                        </p>
+                        <p class="info-notice">
+                            주차장 위치 상세 주소 (차량용 네비 이용)
+                            <span>- ② 주차장 : 죽왕면 삼포리 243-16</span>
+                            <span>- ③ 주차장 : 죽왕면 삼포리 243-12</span>
+                            <span>- ④ 주차장 : 죽왕면 삼포리 243-11</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script>
+
+        </script>
+        <!-- //2021.06.02 주차장 섹션추가 -->
+
+        <div class="popup-lodgment">
+            <div class="pop-wrap">
+                <div class="pop-contents">
+                    <div class="img-box">
+                        <img src="http://img.ocean2you.co.kr/renew/event/korea_sales_700.jpg" alt="이미지">
+                    </div>
+                    <button type="button" class="btn-close-pop">
+                        <img src="http://img.ocean2you.co.kr/renew/event/etc/btn_close_pop_lodgment.jpg" alt="닫기">
+                    </button>
+                    <a href="http://ktostay.interpark.com" target="_blank" class="btn-go-event">
+                        <img src="http://img.ocean2you.co.kr/renew/event/etc/btn_go_ev_lodgment.jpg" alt="가기">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function () {
+                //시작시
+                if ($(".popup-lodgment").css("display") == "block") {
+                    //바디고정
+                    $("body").addClass("pop-overflow-hidden");
+                }
+
+                //팝업닫기
+                $(".popup-lodgment .btn-close-pop").on('click', function () {
+                    $(".popup-lodgment").css("display", "none");
+                    //바디고정 해제
+                    $("body").removeClass("pop-overflow-hidden");
+                });
+
+            });
+        </script>
+
+        <div class="pop-agoda-banner">
+            <div class="pop-area">
+                <div class="pop-banner btn-open-agoda">
+                    <img src="http://img.ocean2you.co.kr/renew/pop/bt_agoda.png" alt="이미지">
+                </div>
+            </div>
+        </div>
+
+        <div class="pop-agoda-wrap2 close-pop2">
+            <div class="pop-area">
+                <div class="pop-main">
+                    <div class="img-main">
+                        <img src="http://img.ocean2you.co.kr/renew/pop/pop_agoda_gold2.png" alt="이미지">
+                    </div>
+                    <button type="button" class="btn-close close-pop">닫기</button>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function () {
+                //열기
+                $(".btn-open-agoda").on("click", function () {
+                    $(".pop-agoda-wrap2").show();
+                    $(".pop-agoda-banner").addClass("banner-hide");
+                });
+
+                //PC상에서 닫기
+                $(".pop-agoda-wrap2 .close-pop").on("click", function () {
+                    $(".pop-agoda-wrap2").hide();
+                    $(".pop-agoda-banner").removeClass("banner-hide");
+                });
+
+                //모바일상에서 닫기
+                $(".pop-agoda-wrap2.close-pop2").on("click", function () {
+                    let winW = window.outerWidth;
+                    console.log(winW);
+                    if (winW < 991) {
+                        $(".pop-agoda-wrap2").hide();
+                        $(".pop-agoda-banner").removeClass("banner-hide");
+                    }
+                });
+            });
+        </script>
+        @@include('../include/_footer.html', {
+        "page": "main"
+        })
+</body>
+
+</html>

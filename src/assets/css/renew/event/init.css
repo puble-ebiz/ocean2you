@@ -1,0 +1,429 @@
+/* 오션투유 - 이벤트/축제.css */
+.vid-wrap {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: url('http://img.ocean2you.co.kr/renew/intro/intro_titBg.jpg') no-repeat top center;
+}
+
+/* 상단타이틀 */
+.title {
+    padding: 100px 0 20px;
+}
+.title .tit-box {
+    text-align: center;
+    padding-top: 75px;
+    color: #fff;
+}
+.title .tit-box h2 {
+    font-size: 27px;
+    letter-spacing: -2.5px;
+}
+.title .tit-box .mg- {
+    display: block;
+    height: 1px;
+    width: 60px;
+    margin: 18px auto 20px;
+    background: #fff;
+}
+
+.title .event-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    height: 50px;
+}
+.title .event-menu a {
+    padding: 15px 0;
+    width: 15%;
+    border-left: 1px solid #fff;
+    box-sizing: border-box;
+    color: #fff;
+}
+.title .event-menu a:first-child {
+    border-left: 0 none;
+}
+.title .event-menu a.active {
+    margin-right: -1px;
+    border: 1px solid #fff;
+}
+
+/* Event-wrawp */
+.event-wrap {
+    padding: 70px 0;
+}
+.event-wrap .container {
+    width: 1180px;
+}
+.event-wrap [class*='event-tit'] {
+    text-align: center;
+}
+.event-wrap [class*='event-tit'] h4 {
+    font-size: 35px;
+    color: #44a8ff;
+    font-weight: 600;
+}
+.event-wrap [class*='event-tit'] .sub-tit {
+    position: relative;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #373737;
+}
+.event-wrap [class*='event-tit'] .sub-tit:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -20px;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 1px;
+    background-color: #44a8ff;
+}
+
+/* pagination */
+.pagination {
+    margin-top: 30px;
+    text-align: center;
+}
+.pagination .inner-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination [class*='btn'] {
+    color: #323232;
+}
+.pagination .btn-prev {
+    margin-right: 15px;
+}
+.pagination .btn-next {
+    margin-left: 15px;
+}
+
+.pagination .page-link {
+    margin: 0 3px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    font-size: 15px;
+    line-height: 28px;
+}
+.pagination .page-link.active {
+    background-color: #323232;
+    color: #fff;
+}
+
+/* 이벤트 목록 list */
+.eventCont {
+    text-align: center;
+}
+.eventCont .event-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 70px;
+}
+.eventCont .event-list li {
+    margin: 0 0 35px;
+    width: 360px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+}
+.eventCont .event-list li:nth-child(3n - 1) {
+    margin: 0 50px 35px;
+}
+.eventCont .event-list li:hover {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px;
+    box-sizing: border-box;
+}
+
+.eventCont .event-list .info {
+    padding: 25px 20px;
+}
+.eventCont .event-list .info .info-tit {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin-bottom: 5px;
+    max-height: 45px;
+    text-overflow: ellipsis;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.25;
+}
+.eventCont .event-list .info .date {
+    font-size: 15px;
+    vertical-align: middle;
+    color: #6b6b6b;
+}
+.eventCont .event-list .info .date .label {
+    padding: 0 4px;
+    background: #6b6b6b;
+    font-size: 13px;
+    letter-spacing: -1px;
+    color: #fff;
+}
+
+/* 이벤트 상세보기 view */
+.eventView {
+    margin-bottom: 50px;
+    text-align: center;
+    color: #797979;
+}
+.eventView .gotoList {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #797979;
+}
+
+.eventView .view-cont {
+    margin-top: 70px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+.view-cont .tit {
+    padding: 15px 0;
+}
+.view-cont .text {
+    margin: 0 auto;
+    padding: 40px 0;
+    max-width: 750px;
+    line-height: 1.4;
+}
+.view-cont .infomation {
+    margin-bottom: 50px;
+    padding: 0 50px;
+    box-sizing: border-box;
+    text-align: left;
+}
+.view-cont .infomation .tit {
+    border-bottom: 2px solid #000;
+    font-weight: 500;
+    letter-spacing: -1px;
+    color: #000;
+}
+.view-cont .infomation .column,
+.view-cont .infomation .column ul li {
+    display: flex;
+}
+.view-cont .infomation .column ul {
+    width: 50%;
+}
+.view-cont .infomation .column li {
+    padding: 14px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 17px;
+}
+.view-cont .infomation .column li .info-tit {
+    width: 20%;
+    font-weight: 500;
+    letter-spacing: -1px;
+}
+.view-cont .infomation .column li .info-cont {
+    width: 80%;
+}
+.view-cont .infomation .column li .info-cont a {
+    padding: 5px 30px;
+    border-radius: 5px;
+    background: #44a8ff;
+    color: #fff;
+}
+
+@media (max-width: 1200px) {
+    /* Event-wrawp */
+    .event-wrap .container {
+        padding: 0 20px;
+        width: 100%;
+    }
+    /* 이벤트 목록 list */
+    .eventCont .event-list {
+        margin-left: 0;
+        width: 100%;
+    }
+    .eventCont .event-list li {
+        margin: 0 0 2%;
+        width: 32%;
+    }
+    .eventCont .event-list li:nth-child(3n - 1) {
+        margin: 0 2% 2%;
+    }
+} /* //1200 */
+
+@media (max-width: 990px) {
+    /* 상단타이틀 */
+    .title {
+        padding-bottom: 45px;
+    }
+    .title .event-menu a {
+        width: 16.5%;
+    }
+    /* Event-wrawp */
+    .event-wrap .container {
+        padding: 0;
+        width: 95%;
+    }
+    /* 이벤트 목록 list */
+    .eventCont .event-list .info {
+        padding: 20px 10px;
+    }
+    .eventCont .event-list .info .info-tit {
+        font-size: 17px;
+        line-height: 1.3;
+    }
+    /* 이벤트 상세보기 view */
+    .view-cont .text {
+        max-width: 85%;
+    }
+    .view-cont .infomation .column li {
+        font-size: 15px;
+    }
+    .view-cont .infomation .column li .info-tit {
+        width: 23%;
+    }
+    .view-cont .infomation .column li .info-cont {
+        width: 77%;
+    }
+} /* //990 */
+
+@media (max-width: 768px) {
+    /* 상단타이틀 */
+    .title .tit-box .titTxt img {
+        width: 260px;
+    }
+    .title .event-menu {
+        margin: 20px auto 0;
+        width: 320px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .title .event-menu a {
+        margin-right: 0;
+        margin-bottom: 2%;
+        padding: 10px 0;
+        width: 48%;
+        border: 1px solid #a8a6a4;
+    }
+    .title .event-menu a:first-child {
+        border-left: 1px solid #a8a6a4;
+    }
+    .title .event-menu a.active {
+        margin-right: 0;
+        border-color: #fff;
+    }
+    /* Event-wrawp */
+    .event-wrap {
+        padding: 40px 0 70px;
+    }
+    .event-wrap [class*='event-tit'] h4 {
+        font-size: 28px;
+        font-weight: 500;
+    }
+    .event-wrap [class*='event-tit'] .sub-tit {
+        margin-top: 15px;
+        font-size: 15px;
+    }
+    .event-wrap [class*='event-tit'] .sub-tit:after {
+        width: 30px;
+        bottom: -10px;
+    }
+    /* 이벤트 목록 list */
+    .eventCont .event-list li {
+        width: 48%;
+    }
+    .eventCont .event-list li:nth-child(3n - 1) {
+        margin: 0 0 2%;
+    }
+    .eventCont .event-list li:nth-child(2n) {
+        margin: 0 0 2% 2%;
+    }
+
+    /* 이벤트 상세보기 view */
+    .eventView .view-cont {
+        margin-top: 2.5rem;
+    }
+
+    .view-cont .text {
+        padding: 30px 0;
+        font-size: 16px;
+    }
+    .view-cont .infomation {
+        margin: 0 auto 50px;
+        padding: 0;
+        width: 90%;
+    }
+    .view-cont .infomation .tit {
+        padding: 13px 0;
+        font-size: 16px;
+    }
+    .view-cont .infomation .column {
+        flex-wrap: wrap;
+    }
+    .view-cont .infomation .column ul {
+        width: 100%;
+    }
+    .view-cont .infomation .column li {
+        font-size: 14px;
+    }
+    .view-cont .infomation .column li .info-tit {
+        padding-left: 2%;
+        width: 25%;
+        box-sizing: border-box;
+    }
+    .view-cont .infomation .column li .info-cont {
+        width: 75%;
+    }
+} /* //768 */
+
+@media (max-width: 425px) {
+    /* 이벤트 목록 list */
+    .eventCont .event-list {
+        margin-top: 40px;
+    }
+    .eventCont .event-list .info {
+        padding: 20px 10px;
+    }
+    .eventCont .event-list .info .info-tit {
+        font-size: 15px;
+    }
+    .eventCont .event-list .info .date {
+        font-size: 14px;
+    }
+    /* 이벤트 상세보기 view */
+    .view-cont .infomation .column li .info-cont {
+        padding-right: 10%;
+        text-align: center;
+    }
+    /* Pagination */
+    .pagination .page-link {
+        margin: 0;
+    }
+    .pagination .btn-prev {
+        margin-right: 10px;
+    }
+    .pagination .btn-next {
+        margin-left: 10px;
+    }
+} /* //425 */
+
+@media (max-width: 320px) {
+    /* 이벤트 상세보기 view */
+    .view-cont .infomation .column li .info-tit {
+        padding-left: 0;
+        width: 22%;
+        letter-spacing: -1.2px;
+    }
+    .view-cont .infomation .column li .info-cont {
+        padding-right: 0;
+        width: 78%;
+    }
+} /* //320 */

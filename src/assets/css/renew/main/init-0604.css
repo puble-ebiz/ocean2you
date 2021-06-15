@@ -1,0 +1,2070 @@
+@charset 'utf-8';
+
+#wrap * {
+    box-sizing: border-box;
+}
+
+/* COMMON */
+section [class*='container'] {
+    width: 1432px;
+}
+section [class*='container'] .in-tit {
+    text-align: center;
+    color: #323232;
+}
+section [class*='container'] .in-tit h2 {
+    font-size: 37px;
+    font-weight: 600;
+}
+section [class*='container'] .in-tit p {
+    font-size: 22px;
+    margin-top: 25px;
+}
+section [class*='container'] .more-a {
+    display: block;
+    width: 102px;
+    height: 30px;
+    border: 1px solid #fff;
+    text-align: center;
+    font-size: 17px;
+    line-height: 26px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    color: #fff;
+}
+section [class*='container'] .more-a:hover {
+    border-color: #00c6ff;
+    color: #00c6ff;
+}
+/* visual 영상 */
+.vid-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url('http://img.ocean2you.co.kr/renew/main_pic.jpg') no-repeat center center;
+    background-size: cover;
+}
+.vid-wrap .vid {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 0.2s ease 0s;
+}
+/* main/player.css */
+.vid-wrap .bg-player-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    display: block;
+}
+.vid-wrap .bg-player-box .video-pc {
+    position: absolute;
+    width: calc(560 / 560 * 160vmax);
+    height: calc(315 / 560 * 160vmax);
+    top: calc(-30 / 560 * 160vmax);
+    left: -5%;
+}
+.vid-wrap .bg-player-box .video-pc-vertical {
+    position: absolute;
+    width: calc(560 / 315 * 130vmax);
+    height: calc(315 / 315 * 130vmax);
+    top: calc(-60 / 315 * 130vmax);
+    left: calc(-150 / 315 * 130vmax);
+}
+/* //main/player.css */
+
+/* Main */
+.main {
+    position: relative;
+}
+.main:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(http://img.ocean2you.co.kr/renew/main_ptBg.png) repeat;
+    opacity: 0.75;
+}
+/* Main-비쥬얼텍스트 */
+.main .txt-box {
+    position: absolute;
+    display: block;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    margin-top: -175px;
+    opacity: 0;
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+    transition: all 1s ease 0s;
+}
+.main .txt-box.on {
+    opacity: 1;
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=1)';
+}
+.main .txt-box.end {
+    opacity: 1;
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=1)';
+}
+.main .txt-box img {
+    margin: 0 auto;
+}
+.main .txt-box .pc-img {
+    display: block;
+}
+.main .txt-box .m-img {
+    display: none;
+}
+/* Main-모바일 객실예약 버튼 */
+.main .txt-box .more-a {
+    display: block;
+    margin: 0 auto;
+    width: 208px;
+    height: 54px;
+    border: 4px solid #fff;
+    font-size: 24px;
+}
+.main .txt-box .more-a:after {
+    content: '';
+    height: 110%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.main .txt-box .more-a img {
+    position: relative;
+    top: -2px;
+    left: 7px;
+}
+/* Main-날씨 */
+.main .weath-wrap {
+    display: block;
+    position: absolute !important;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50px;
+    z-index: 999;
+    width: 318px;
+    height: 68px;
+    border: 2px solid rgba(255, 255, 255, 0.33);
+    border-radius: 50px;
+}
+.main .weath-wrap {
+    opacity: 0;
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+    transition: all 1s ease 0s;
+}
+.main .weath-wrap.on {
+    opacity: 1;
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=1)';
+}
+.main .weath-wrap.end {
+    opacity: 1;
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=1)';
+}
+.main .weath-wrap .weath-box {
+    display: table;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 0 18px;
+    border-radius: 50px;
+    background: rgba(0, 0, 0, 0.33);
+}
+.main .weath-wrap .weath-box p,
+.main .weath-wrap .weath-box span {
+    font-weight: bold;
+    letter-spacing: -0.75px;
+    color: #fff;
+    font-family: 'Nanum Gothic', 'Malgun Gothic', 'Dotum', sans-serif;
+}
+.weath-wrap .weath-box p {
+    display: table-cell;
+    position: relative;
+    vertical-align: middle;
+    text-align: center;
+}
+.main .weath-wrap .weath-box p:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 33px;
+    top: 15px;
+    left: 0;
+    margin-top: 0px;
+    background: rgba(255, 255, 255, 0.33);
+}
+.main .weath-wrap .weath-box p:first-child:before {
+    content: none;
+}
+.main .weath-wrap .weath-box .weath-img {
+    width: 56px;
+    padding-right: 3px;
+}
+.main .weath-wrap .weath-box .weath-txt span {
+    display: inline-block;
+    width: 100%;
+    font-size: 15px;
+}
+.main .weath-wrap .weath-box .weath-txt .day {
+    margin-top: -3px;
+    line-height: 16px;
+}
+.main .weath-wrap .weath-box .weath-txt .location {
+    line-height: 27px;
+}
+.main .weath-wrap .weath-box .tem-txt {
+    width: 81px;
+    padding-left: 10px;
+    text-align: left;
+}
+.main .weath-wrap .weath-box .tem-txt span {
+    display: inline-block;
+    letter-spacing: -2px;
+}
+.main .weath-wrap .weath-box .tem-txt .tem-num {
+    min-width: 40px;
+    font-size: 34px;
+    line-height: 21px;
+}
+.main .weath-wrap .weath-box .tem-txt .tem-cel {
+    position: absolute;
+    font-size: 24px;
+    margin-top: 2px;
+}
+/* 사용대기 -마우스스크롤 이미지 주석 */
+/* .main #scr-box {position: absolute;left: 50%;bottom: 10px;margin-left: -14px;}
+.main #scr-box > img {position: relative;top: 0;display: block;margin: 3px auto;}
+.main #scr-box > img.nth-1 {margin-bottom: 8px;}
+.main #scr-box > img.nth-2 {margin-bottom: 5px;-webkit-animation: scrAni-02 1.5s 1.1s infinite;animation: scrAni-02 1.5s 1.1s infinite;}
+.main #scr-box > img.nth-3 {-webkit-animation: scrAni-03 1.5s 1.2s infinite;animation: scrAni-03 1.5s 1.2s infinite;}
+@keyframes scrAni-02 {
+    0% {opacity: 0;}
+    50% {opacity: 0.5;}
+    100% {opacity: 1;}
+}
+@keyframes scrAni-03 {
+    0% {opacity: 0;}
+    50% {opacity: 0.5;}
+    100% {opacity: 1;}
+} */
+
+/* Intro */
+.intro {
+    position: relative;
+    padding: 160px 0 90px;
+    width: 100%;
+    background: url(http://img.ocean2you.co.kr/renew/intro_bg.jpg) no-repeat;
+    color: #fff;
+}
+.intro .container {
+    display: flex;
+}
+.intro [class*='colth-'] {
+    width: 50%;
+}
+.intro [class*='colth-'] p {
+    font-size: 19px;
+    line-height: 1.6;
+}
+.intro .colth-1 p {
+    margin-top: 20px;
+}
+
+.intro .colth-1 {
+    padding-left: 60px;
+}
+.intro .colth-1 h2 {
+    position: relative;
+    margin-top: 10px;
+    font-family: 'Nanum gothic', sans-serif;
+    font-size: 65px;
+    line-height: 1.4;
+}
+.intro .colth-1 h2:before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: -10px;
+    width: 110px;
+    height: 1px;
+    background: #fff;
+}
+.intro .colth-1 .more-a {
+    position: relative;
+    padding-left: 5px;
+    margin: 30px 0 0 -60px;
+    width: 140px;
+    height: 70px;
+    font-size: 16px;
+    line-height: 69px;
+    border: 0 none;
+}
+.intro .colth-1 .more-a:after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    content: '';
+    display: block;
+    width: 70px;
+    height: 70px;
+    border: 8px solid rgba(255, 255, 255, 0.25);
+    box-sizing: border-box;
+}
+.intro .colth-1 .more-a:hover {
+    color: #fff;
+    padding-left: 10px;
+}
+.intro .colth-1 .more-a .i-rArr {
+    margin-left: 5px;
+}
+
+.intro .colth-2 {
+    padding-left: 100px;
+}
+.intro .colth-2 [class*='nth-'] {
+    overflow: hidden;
+}
+.intro .colth-2 [class*='nth-'] img,
+.intro .colth-2 [class*='nth-'] p,
+.intro .colth-2 [class*='nth-'] .more-a {
+    float: left;
+}
+.intro .colth-2 [class*='nth-'] p {
+    margin-top: -6px;
+}
+.intro .colth-2 [class*='nth-'] img {
+    margin-right: 22px;
+}
+
+.intro .colth-2 .nth-2 {
+    margin-top: 50px;
+}
+.intro .colth-2 [class*='nth-'] .more-a {
+    margin-top: 15px;
+}
+
+/* Package */
+.package .in-bg {
+    position: relative;
+    width: 100%;
+    background: url(http://img.ocean2you.co.kr/renew/package_bg.jpg) no-repeat top center;
+}
+.package .container {
+    padding: 150px 0 80px;
+}
+
+.package .container .in-tit h2 {
+    position: relative;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 64px;
+    font-weight: 500;
+    color: #104c6a;
+}
+.package .container .in-tit h2:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -30px;
+    width: 130px;
+    height: 1px;
+    background: #104c6a;
+}
+.package .container .in-tit p {
+    margin-top: 30px;
+    font-size: 19px;
+    color: #282828;
+}
+/* Package-리스트 */
+.package .pkg-list {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-top: 115px;
+    margin-left: -25px;
+    width: 1480px;
+    color: #fff;
+}
+.package .pkg-list li {
+    position: relative;
+    margin-bottom: 2.5%;
+    width: 25%;
+    height: 305px;
+}
+.package .pkg-list li .in-cont {
+    position: absolute;
+    bottom: 7%;
+    left: 13.5%;
+    text-align: left;
+}
+.package .pkg-list li .in-cont h3 {
+    position: relative;
+    margin-top: 10px;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 25px;
+}
+.package .pkg-list li .in-cont h3:before {
+    content: '';
+    position: absolute;
+    left: 2px;
+    top: -12px;
+    width: 45px;
+    height: 1px;
+    background: #fff;
+}
+.package .pkg-list p {
+    margin-top: 25px;
+    font-size: 18px;
+    line-height: 1.3;
+}
+.package .pkg-list .more-a {
+    margin-top: 20px;
+}
+/* Facil-시설안내 */
+.facil {
+    position: relative;
+    background: url(http://img.ocean2you.co.kr/renew/facil_bg.jpg) no-repeat top center;
+}
+.facil .container {
+    padding: 90px 0;
+}
+.facil .in-tit {
+    margin-bottom: 60px;
+}
+.facil .in-tit h2 {
+    font-size: 37px;
+    font-weight: 600;
+}
+.facil .in-tit p {
+    margin-top: 25px;
+    font-size: 22px;
+}
+/* Facil-시설 리스트 */
+.facil .bxList {
+    cursor: pointer;
+    display: flex;
+    margin-top: 10px;
+}
+.facil .bxList .bxBox {
+    position: relative;
+}
+.facil .nth-1 .bxBox.nth-1 {
+    width: 565px;
+}
+.facil .nth-1 .bxBox.nth-2 {
+    margin-left: 10px;
+    width: calc(100% - 575px);
+}
+.facil .nth-2 .bxBox {
+    width: 50%;
+}
+.facil .nth-2 .bxBox.nth-2 {
+    margin-left: 10px;
+}
+.facil .nth-2 .bxBox img {
+    width: 100%;
+}
+.facil .nth-3 .bxBox.nth-2 {
+    margin: 0 10px;
+}
+
+.facil .bxList .bxBox .txt-box {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 18px 22px 22px;
+    background: url(http://img.ocean2you.co.kr/renew/bg_dim.png) repeat;
+    color: #fff;
+}
+.facil .bxList .bxBox .txt-box p {
+    font-size: 22px;
+}
+.facil .bxList .bxBox .txt-box .more-a {
+    margin-top: 12px;
+}
+
+/* Common: 오시는길,주차안내 */
+.wayto,
+.parking {
+    position: relative;
+    padding-top: 90px;
+    background: #f1f1f1;
+}
+.wayto .map-box,
+.parking .info-box {
+    position: relative;
+    margin-top: 62px;
+    border: 1px solid #bdbdbd;
+    background: #e6e6e6;
+}
+.parking .info-box .pc-img {
+    display: block;
+}
+.parking .info-box .m-img {
+    display: none;
+}
+
+/* WAYTO 오시는길 */
+.wayto .map-box {
+    display: flex;
+}
+.wayto .map-box > div {
+    width: 50%;
+    height: 517px;
+}
+.wayto .map-box .map iframe,
+.wayto .map-box .map > div {
+    width: 100%;
+    height: 100%;
+}
+
+.wayto .map-box .mapExp {
+    padding: 58px 30px 30px 40px;
+}
+.wayto .map-box .mapExp p {
+    font-family: 'Nanum gothic', sans-serif;
+}
+.wayto .map-box .mapExp .p0 {
+    font-size: 24px;
+    margin-top: 50px;
+    font-weight: 600;
+}
+.wayto .map-box .mapExp .p0:first-child {
+    margin-top: 0;
+}
+.wayto .map-box .mapExp .p1 {
+    position: relative;
+    margin-top: 14px;
+    padding-left: 12px;
+    font-size: 20px;
+    line-height: 1.6;
+}
+.wayto .map-box .mapExp .p1:before {
+    content: '-';
+    display: inline-block;
+    position: absolute;
+    left: 0;
+}
+.wayto .map-box .mapExp .wayBtn {
+    position: relative;
+    top: -2px;
+    margin-left: 4px;
+}
+.wayto .map-box .mapExp p .lg-block {
+    display: block;
+}
+/* Parking-주차안내 */
+.parking {
+    padding-bottom: 120px;
+}
+.parking .parking-info {
+    padding: 35px 45px 50px;
+    box-sizing: border-box;
+}
+.parking .parking-info p {
+    font-family: 'Nanum gothic', sans-serif;
+    word-break: keep-all;
+    font-size: 20px;
+    letter-spacing: -0.7px;
+    line-height: 1.5;
+    color: #2b2b2b;
+}
+.parking .parking-info .tit {
+    margin-bottom: 15px;
+    font-weight: bold;
+    line-height: 1;
+}
+.parking .parking-info .info-notice {
+    position: relative;
+    margin-top: 20px;
+    padding-left: 25px;
+}
+.parking .parking-info .info-notice:before {
+    content: '※';
+    position: absolute;
+    left: 0;
+}
+.parking .parking-info .info-notice span {
+    display: block;
+    margin-top: 3px;
+}
+
+/* 아고다 - banner */
+.pop-agoda-banner {
+    z-index: 100;
+    position: fixed;
+    bottom: 20px;
+    right: 60px;
+}
+.banner-hide {
+    display: none;
+}
+.btn-open-agoda {
+    cursor: pointer;
+}
+.pop-agoda-wrap {
+    display: none;
+    z-index: 110000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #221e1f;
+}
+.pop-agoda-wrap .pop-area {
+    width: 100%;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.pop-agoda-wrap .pop-main {
+    width: 100%;
+    max-width: 1348px;
+    margin: 0 auto;
+    text-align: center;
+}
+.pop-agoda-wrap .pop-main img {
+    width: 100%;
+}
+.pop-agoda-wrap .close-pop {
+    cursor: pointer;
+}
+.pop-agoda-wrap .img-mobile {
+    display: none;
+}
+
+/* 아고다 - popup */
+.pop-agoda-wrap2 {
+    display: none;
+    z-index: 105;
+    position: fixed;
+    top: 130px;
+    right: 40px;
+}
+.pop-agoda-wrap2 .pop-area {
+    width: 100%;
+    position: relative;
+}
+.pop-agoda-wrap2 .pop-main {
+    width: 100%;
+    max-width: 1348px;
+    margin: 0 auto;
+    text-align: center;
+}
+.pop-agoda-wrap2 .pop-main img {
+    width: 100%;
+}
+.pop-agoda-wrap2 .btn-close {
+    display: block;
+    background-color: #848484;
+    width: 100%;
+    padding: 8px 0;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    line-height: 1;
+}
+.pop-agoda-wrap2 .close-pop {
+    cursor: pointer;
+}
+.pop-agoda-wrap2 .img-mobile {
+    display: none;
+}
+
+/* 아고다 - mobile */
+.sect-agoda {
+    display: none;
+    width: 100%;
+    background-color: #221e1f;
+    text-align: center;
+}
+.sect-agoda .sect-area,
+.sect-agoda .agoda-box,
+.sect-agoda .agoda-box img {
+    width: 100%;
+}
+
+/* POPUP - 룸 이벤트*/
+[class*='pop-event-room'] .pc-img {
+    display: block;
+}
+[class*='pop-event-room'] .m-img {
+    display: none;
+}
+[class*='pop-event-room'] {
+    z-index: 100000;
+    position: fixed;
+    left: 30px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+[class*='pop-event-room'] .pop-box {
+    position: relative;
+}
+[class*='pop-event-room'] .pop-box .pop-main,
+[class*='pop-event-room'] .pop-box .pop-main img,
+[class*='pop-event-room'] .pop-event-area .pop-box .pop-main img {
+    width: 100%;
+}
+[class*='pop-event-room'] .pop-event-area .pop-btn-box-ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 34px;
+    background-color: #ccc;
+}
+[class*='pop-event-room'] .pop-event-area .pop-btn-box-ul li {
+    width: 50%;
+}
+[class*='pop-event-room'] .pop-event-area .pop-btn-box-ul li button {
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    background: none;
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: -0.4px;
+    line-height: 1.1;
+}
+[class*='pop-event-room'] .pop-event-area .pop-btn-box-ul li .btn-not-today {
+    background-color: #666;
+    color: #fff;
+}
+[class*='pop-event-room'] .pop-event-area .pop-btn-box-ul li .btn-close-pop {
+    background-color: #444;
+    color: #fff;
+}
+
+.pop-event-room {
+    top: 130px;
+}
+.pop-event-room02 {
+    top: 353px;
+}
+.pop-event-room03 {
+    top: 530px;
+}
+
+/* Mediaqeury */
+@media (max-width: 1431px) {
+    /* COMMON */
+    section [class*='container'] {
+        width: 990px;
+    }
+    section [class*='container'] .more-a {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 0 8px;
+        width: auto;
+        height: 26px;
+        font-size: 15px;
+        line-height: 23px;
+        letter-spacing: -1.3px;
+    }
+    /* Intro */
+    .intro {
+        padding: 100px 0 90px;
+    }
+    .intro .colth-1 h2 {
+        font-size: 60px;
+    }
+    .intro .colth-2 .nth-2 {
+        margin-top: 30px;
+    }
+    .intro [class*='colth-'] p {
+        font-size: 17px;
+    }
+    .intro .colth-2 [class*='nth-'] img {
+        width: 240px;
+    }
+    .intro .colth-2 [class*='nth-'] img,
+    .intro .colth-2 [class*='nth-'] p,
+    .intro .colth-2 [class*='nth-'] .more-a {
+        float: none;
+    }
+    .intro .colth-2 [class*='nth-'] p {
+        margin-top: 5px;
+    }
+    .intro .colth-2 [class*='nth-'] .more-a {
+        width: 95px;
+        height: 30px;
+        font-size: 16px;
+        line-height: 27px;
+    }
+    /* Package */
+    .package .container {
+        padding-top: 120px;
+    }
+    .package .container .in-tit h2 {
+        font-size: 60px;
+    }
+    .package .container .in-tit p {
+        font-size: 18px;
+    }
+    /* Package-리스트 */
+    .package .pkg-list {
+        margin-top: 110px;
+        margin-left: 0;
+        width: 100%;
+    }
+    .package .pkg-list li {
+        margin: 1%;
+        width: 23%;
+        height: auto;
+    }
+    .package .pkg-list li .in-cont {
+        position: absolute;
+        bottom: 15px;
+        left: 10px;
+    }
+    .package .pkg-list li .in-cont h3 {
+        font-size: 20px;
+    }
+    .package .pkg-list p {
+        margin-top: 15px;
+        font-size: 15px;
+    }
+    .package .pkg-list .more-a {
+        margin-top: 10px;
+        padding: 0;
+        width: 95px;
+        height: 28px;
+        font-size: 16px;
+        letter-spacing: -1.2px;
+        line-height: 25px;
+    }
+    /* Facil-시설안내 */
+    .facil .in-tit h2 {
+        font-size: 34px;
+    }
+    .facil .in-tit p {
+        font-size: 18px;
+    }
+    /* Facil-시설 리스트 */
+    .facil .bxList {
+        margin-top: 9px;
+    }
+    .facil .bxList.nth-1 {
+        margin-top: 66px;
+    }
+    .facil .bxList.nth-1 .bxBox.nth-1 {
+        width: 390px;
+    }
+    .facil .bxList.nth-1 .bxBox.nth-2 {
+        width: calc(100% - 400px);
+    }
+    .facil .bxList .bxBox .txt-box {
+        padding: 10px 22px 14px;
+    }
+    .facil .bxList .bxBox .txt-box p {
+        font-size: 17px;
+    }
+    .facil .bxList .bxBox .txt-box {
+        margin-top: 10px;
+    }
+    /* Wayto 오시는길 */
+    .wayto .map-box .mapExp {
+        padding: 45px 35px;
+    }
+    .wayto .map-box .mapExp > p {
+        word-break: keep-all;
+    }
+    .wayto .map-box .mapExp .p0 {
+        font-size: 20px;
+        margin-top: 38px;
+    }
+    .wayto .map-box .mapExp .p1 {
+        margin-top: 10px;
+        font-size: 18px;
+        letter-spacing: 0.5px;
+        line-height: 1.6;
+    }
+    .wayto .map-box .mapExp .p1:before {
+        content: '-';
+        display: inline-block;
+        position: absolute;
+        left: 0;
+    }
+    /* Parking-주차안내 */
+    .parking .parking-info {
+        padding: 45px;
+    }
+} /* //143 ~ 992 */
+
+@media (max-width: 990px) {
+    .vid-wrap .m-vid {
+        display: none;
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        margin: 0 auto;
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+    .vid-wrap #bgMov {
+        position: relative;
+        margin: 0 auto;
+        min-width: 100%;
+        min-height: 100%;
+        text-align: center;
+    }
+    .vid-wrap .vid {
+        display: none;
+    }
+    /* COMMON */
+    section [class*='container'] {
+        margin: 0 auto;
+        width: 90%;
+    }
+    /* Main */
+    .main {
+        z-index: 2;
+    }
+    .main .txt-box {
+        margin-top: -235px;
+        opacity: 1;
+        -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=1)';
+    }
+
+    .main .txt-box .pc-img {
+        display: none;
+    }
+    .main .txt-box .m-img {
+        margin: 0 auto;
+        display: block;
+    }
+    .main .txt-box .more-a {
+        width: 178px;
+        height: 48px;
+    }
+    .main .txt-box .more-a .gt {
+        position: relative;
+        top: -2px;
+        left: 10px;
+        width: 9px;
+    }
+    .main .txt-box .booking-a {
+        margin-top: 20px;
+        border-color: #44a8ff;
+        background: #44a8ff;
+        font-size: 16px;
+        color: #fff;
+    }
+    .main .txt-box .booking-a:after {
+        height: 106%;
+    }
+    .main .txt-box .booking-a .cal {
+        position: relative;
+        width: 22px;
+        top: -2px;
+        margin-right: 10px;
+    }
+    .main .txt-box .more-a {
+        width: 122px;
+        height: 44px;
+        font-size: 15px;
+        line-height: 35px;
+    }
+    .main .weath-wrap {
+        opacity: 1;
+        -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=1)';
+    }
+    /* Intro */
+    .intro .colth-1 {
+        padding-top: 50px;
+        padding-left: 50px;
+    }
+    .intro .colth-1 h2 {
+        font-size: 32px;
+    }
+    .intro .colth-2 [class*='nth-'] .more-a {
+        margin-top: 10px;
+    }
+
+    /* popup - 객실 배너 */
+    [class*='pop-event-room'] {
+        position: relative;
+        top: auto;
+        left: auto;
+        display: block;
+        width: 100%;
+    }
+    [class*='pop-event-room'] .pc-img {
+        display: none;
+    }
+    [class*='pop-event-room'] .m-img {
+        display: block;
+    }
+    .pop-event-room .pop-event-area .pop-btn-box-ul {
+        display: none;
+    }
+    /* 모바일배너 - 아고다 */
+    .sect-agoda {
+        display: block;
+    }
+    .pop-agoda-banner {
+        display: none;
+    }
+    .pop-agoda-wrap .pop-main {
+        width: 80%;
+    }
+    .pop-agoda-wrap .img-pc {
+        display: none;
+    }
+    .pop-agoda-wrap .img-mobile {
+        display: block;
+    }
+    /* popup-아고다 */
+    .pop-agoda-wrap2 {
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #221e1f;
+    }
+    .pop-agoda-wrap2 .pop-main {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .pop-agoda-wrap2 .img-pc {
+        display: none;
+    }
+    .pop-agoda-wrap2 .img-mobile {
+        display: block;
+    }
+    .pop-agoda-wrap2 .btn-close {
+        display: none;
+    }
+} /* //991*/
+
+@media (max-width: 767px) {
+    /* Main */
+    .main .txt-box .m-img {
+        width: 50%;
+    }
+    .main .weath-wrap {
+        display: none;
+        opacity: 1;
+    }
+    .weath-wrap {
+        position: absolute !important;
+        width: 280px;
+        height: 60px;
+    }
+    .weath-wrap .weath-box {
+        padding: 0 15px;
+    }
+    .weath-wrap .weath-box .weath-img {
+        width: 51px;
+        padding-right: 3px;
+    }
+    .weath-wrap .weath-box .weath-txt span {
+        font-size: 13px;
+    }
+    .weath-wrap .weath-box .weath-txt .day {
+        line-height: 14px;
+    }
+    .weath-wrap .weath-box .weath-txt .location {
+        line-height: 22px;
+    }
+    .weath-wrap .weath-box .tem-txt {
+        width: 75px;
+        padding-left: 8px;
+    }
+    .weath-wrap .weath-box .tem-txt .tem-num {
+        min-width: 35px;
+        font-size: 30px;
+    }
+    .weath-wrap .weath-box .tem-txt .tem-cel {
+        position: absolute;
+        font-size: 20px;
+        top: 50%;
+        margin-top: -8px;
+    }
+    /* popup */
+    .popup-event {
+        top: 150px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        width: 80%;
+    }
+    .popup-event .popup-box .pop-url-mobile {
+        display: block;
+    }
+    .popup-event .popup-box .pop-url-pc {
+        display: none;
+    }
+    .popup-event .btn-pop-close-box .btn-pop-close {
+        font-size: 5vw;
+    }
+} /* //767 */
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .main .txt-box .more-a {
+        display: block;
+        margin: 0 auto;
+        font-size: 24px;
+        border: 4px solid #fff;
+        width: 208px;
+        height: 54px;
+    }
+    .main .txt-box .more-a:after {
+        content: '';
+        height: 110%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .main .txt-box .more-a .gt {
+        position: relative;
+        top: -1px;
+        left: 12px;
+    }
+
+    .intro .container {
+        position: relative;
+        width: 768px;
+    }
+    .intro [class*='colth-'] {
+        width: 50%;
+        float: left;
+    }
+    .intro .colth-1 {
+        width: 60%;
+    }
+    .intro .colth-2 {
+        width: 40%;
+    }
+
+    .intro .colth-1 .mg- {
+        position: relative;
+        left: 5px;
+        width: 109px;
+        height: 1px;
+        background: #fff;
+    }
+    .intro .colth-1 h2 {
+        font-size: 50px;
+        font-family: 'Nanum gothic', sans-serif;
+        line-height: 1.4;
+        margin-top: 10px;
+    }
+    .intro .colth-1 .p0 {
+        font-size: 17px;
+        line-height: 1.6;
+        margin-top: 20px;
+        letter-spacing: -0.5px;
+    }
+    .intro .colth-1 .more-a {
+        display: block;
+        position: relative;
+        width: 140px;
+        height: 70px;
+        padding-left: 5px;
+        margin: 30px 0 0 -60px;
+        line-height: 69px;
+        font-size: 16px;
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+    .intro .colth-1 .more-a .i-rArr {
+        margin-left: 5px;
+    }
+    .intro .colth-1 .more-a:hover {
+        padding-left: 10px;
+    }
+    .intro .colth-1 .more-a:after {
+        position: absolute;
+        right: 0;
+        top: 0;
+        content: '';
+        display: block;
+        width: 70px;
+        height: 70px;
+        border: 8px solid rgba(255, 255, 255, 0.25);
+        box-sizing: border-box;
+    }
+
+    .intro .colth-2 {
+        padding-left: 15px;
+    }
+    .intro .colth-2 > div > * {
+        letter-spacing: -0.5px;
+    }
+    .intro .colth-2 > div > .p0 {
+        font-size: 17px;
+        line-height: 1.6;
+        margin-top: 0px;
+    }
+    .intro .colth-2 > div.nth-1 > .img-1,
+    .intro .colth-2 > div.nth-2 > .img-1 {
+        width: 240px;
+    }
+    .intro .colth-2 > div.nth-1 > .p0 {
+        width: 240px;
+        margin-top: 5px;
+    }
+    .intro .colth-2 > div.nth-2 {
+        margin-top: 30px;
+    }
+    .intro .colth-2 > div.nth-2 > .p0 {
+        width: 280px;
+    }
+    .intro .colth-2 > div > .more-a {
+        font-size: 16px;
+        width: 102px;
+        height: 30px;
+        display: block;
+        text-align: center;
+        border: 1px solid #fff;
+        margin-top: 10px;
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+    .intro .colth-2 > div > .more-a:after {
+        content: '';
+        height: 110%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .intro .colth-2 > div > .more-a:hover {
+        color: #00c6ff;
+        border-color: #00c6ff;
+    }
+
+    .package {
+        position: relative;
+        width: 100%;
+        padding: 0 0 80px;
+    }
+    .package .in-bg {
+        position: relative;
+        width: 100%;
+        background: url(http://img.ocean2you.co.kr/renew/package_bg.jpg) no-repeat top center;
+    }
+    .package .container {
+        padding-top: 50px;
+    }
+    .package .in-tit {
+        text-align: center;
+    }
+    .package .in-tit .mg- {
+        position: relative;
+        width: 101px;
+        height: 1px;
+        background: #fff;
+        margin: 0px auto 20px;
+        background: #104c6a;
+    }
+    .package .in-tit h2 {
+        font-size: 34px;
+        font-family: 'Nanum Gothic', sans-serif;
+        color: #104c6a;
+    }
+    .package .in-tit .p0 {
+        font-size: 17px;
+        color: #282828;
+        margin-top: 20px;
+    }
+    .package .pkg-list {
+        margin: 46px auto 0;
+        width: 768px;
+    }
+    .package .pkg-list > li {
+        position: relative;
+        float: left;
+        color: #fff;
+        width: 40%;
+        height: auto;
+    }
+
+    .package .pkg-list > li:nth-child(2n-1) {
+        margin: 20px 3% 0 7%;
+    }
+    .package .pkg-list > li:nth-child(2n) {
+        margin: 20px 7% 0 3%;
+    }
+
+    .package .pkg-list > li .bgImg {
+        width: 100%;
+    }
+    .package .pkg-list > li .in-cont {
+        position: absolute;
+        top: 135px;
+        left: 20px;
+    }
+    .package .pkg-list .mg- {
+        position: relative;
+        width: 46px;
+        height: 1px;
+        background: #fff;
+    }
+    .package .pkg-list h3 {
+        font-size: 20px;
+        font-family: 'Nanum Gothic', sans-serif;
+        margin-top: 10px;
+    }
+    .package .pkg-list .p0 {
+        font-size: 16px;
+        margin-top: 15px;
+        line-height: 1.3;
+        letter-spacing: -1.5px;
+    }
+    .package .pkg-list .more-a {
+        font-size: 16px;
+        display: inline-block;
+        padding: 0px 10px;
+        height: 28px;
+        border: 1px solid #fff;
+        margin-top: 10px;
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+    .package .pkg-list .more-a:after {
+        content: '';
+        height: 110%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .package .pkg-list .more-a:hover {
+        color: #00c6ff;
+        border-color: #00c6ff;
+    }
+    .package .pkg-list span.more-a:hover {
+        color: #fff;
+        border-color: #fff;
+    }
+
+    .facil {
+        position: relative;
+        padding: 70px 0;
+        background: url(http://img.ocean2you.co.kr/renew/facil_bg.jpg) no-repeat top center;
+    }
+    .facil .container {
+        width: 768px;
+    }
+    .facil .in-tit {
+        text-align: center;
+        color: #323232;
+    }
+    .facil .in-tit h2 {
+        font-size: 34px;
+        font-weight: 600;
+    }
+    .facil .in-tit .p0 {
+        font-size: 17px;
+        margin-top: 25px;
+    }
+
+    .facil .bxList {
+        margin-top: 9px;
+    }
+    .facil .bxList .bxBox {
+        margin-left: 9px;
+        position: relative;
+        float: left;
+    }
+    .facil .bxList.nth-1 {
+        margin-top: 50px;
+    }
+    .facil .bxList.nth-1 .bxBox.nth-1 {
+        width: 303px;
+    }
+    .facil .bxList.nth-1 .bxBox.nth-2 {
+        width: 461px;
+        margin-left: 4px;
+    }
+    .facil .bxList.nth-2 .bxBox.nth-1,
+    .facil .bxList.nth-2 .bxBox.nth-2 {
+        width: 381px;
+    }
+    .facil .bxList.nth-2 .bxBox.nth-2 {
+        margin-left: 6px;
+    }
+    .facil .bxList.nth-3 .bxBox {
+        width: 252px;
+        margin-left: 6px;
+    }
+
+    .facil .bxList .bxBox.nth-1 {
+        margin-left: 0px;
+    }
+
+    .facil .bxList .bxBox .txt-box {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 10px 22px 14px;
+        color: #fff;
+        background: url(http://img.ocean2you.co.kr/renew/bg_dim.png) repeat;
+    }
+    .facil .bxList .bxBox .txt-box .p0 {
+        font-size: 16px;
+    }
+    .facil .bxList .bxBox .txt-box .more-a,
+    .facil .bxList .bxBox .in-txt .more-a {
+        display: inline-block;
+        font-size: 14px;
+        margin-top: 8px;
+        padding: 0px 8px;
+        height: 26px;
+        border: 1px solid #fff;
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+    .facil .bxList .bxBox .txt-box .more-a:after,
+    .facil .bxList .bxBox .in-txt .more-a:after {
+        content: '';
+        height: 114%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .facil .bxList .bxBox .txt-box .more-a:hover,
+    .facil .bxList .bxBox .in-txt .more-a:hover {
+        border: 1px solid #00c6ff;
+        color: #00c6ff;
+    }
+
+    .facil .bxList .bxBox .in-txt {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        text-align: center;
+    }
+    .facil .bxList .bxBox .in-txt .p0 {
+        font-size: 15px;
+        font-weight: 600;
+        margin: 14px auto 8px;
+    }
+    .facil .bxList .bxBox .in-txt .p1 {
+        font-size: 12px;
+        line-height: 1.3;
+        margin-top: 10px;
+        word-break: keep-all;
+        letter-spacing: -1px;
+    }
+    .facil .bxList .bxBox .in-txt .more-a {
+        border: 1px solid #00c6ff;
+        color: #00c6ff;
+    }
+
+    .bx-wrapper .bx-controls-direction {
+        margin-top: -15px;
+    }
+    .bx-wrapper .bx-controls-direction a {
+        width: 30px;
+        height: 30px;
+    }
+
+    .wayto {
+        position: relative;
+        padding: 70px 0 80px;
+        background: #f1f1f1;
+    }
+    .wayto .container {
+        width: 768px;
+    }
+    .wayto .in-tit {
+        text-align: center;
+        color: #323232;
+    }
+    .wayto .in-tit h2 {
+        font-size: 34px;
+        font-weight: 600;
+    }
+    .wayto .in-tit .p0 {
+        font-size: 17px;
+        margin-top: 25px;
+    }
+
+    .wayto .map-box {
+        position: relative;
+        margin-top: 50px;
+        border: 1px solid #bdbdbd;
+        background: #e6e6e6;
+    }
+    .wayto .map-box > div {
+        float: left;
+        width: 50%;
+        height: 517px;
+    }
+    .wayto .map-box .map iframe,
+    .wayto .map-box .map > div {
+        width: 100%;
+        height: 100%;
+    }
+    .wayto .map-box .map .wrap_map {
+        height: 486px;
+    }
+    .wayto .map-box .mapExp {
+        padding: 28px 20px 20px 20px;
+    }
+    .wayto .map-box .mapExp > p {
+        font-family: 'Nanum gothic', sans-serif;
+        word-break: keep-all;
+    }
+    .wayto .map-box .mapExp .p0 {
+        font-size: 18px;
+        margin-top: 38px;
+        font-weight: 600;
+    }
+    .wayto .map-box .mapExp .p0:first-child {
+        margin-top: 0;
+    }
+    .wayto .map-box .mapExp .p1 {
+        position: relative;
+        font-size: 16px;
+        line-height: 1.6;
+        margin-top: 10px;
+        padding-left: 10px;
+    }
+    .wayto .map-box .mapExp .p1:before {
+        content: '-';
+        display: inline-block;
+        position: absolute;
+        left: 0;
+    }
+    .wayto .map-box .mapExp .wayBtn {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        margin-left: 4px;
+    }
+}
+
+/* 삭제 수정 */
+@media (max-width: 767px) {
+    .intro [class*='colth-'] {
+        width: 100%;
+        float: left;
+        padding-left: 5%;
+    }
+
+    .intro .colth-1 .p0 {
+        font-size: 16px;
+        line-height: 1.4;
+        margin-top: 10px;
+        word-break: keep-all;
+        padding-right: 4%;
+    }
+    .intro .colth-1 .more-a {
+        display: block;
+        position: relative;
+        width: 140px;
+        height: 50px;
+        padding-left: 5px;
+        margin: 10px 0 0 -5px;
+        line-height: 48px;
+        font-size: 15px;
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+    .intro .colth-1 .more-a .i-rArr {
+        position: relative;
+        top: -2px;
+        margin-left: 5px;
+    }
+    .intro .colth-1 .more-a:hover {
+        padding-left: 10px;
+    }
+    .intro .colth-1 .more-a:after {
+        position: absolute;
+        right: 0;
+        top: 0;
+        content: '';
+        display: block;
+        width: 50px;
+        height: 50px;
+        border: 8px solid rgba(255, 255, 255, 0.25);
+        box-sizing: border-box;
+    }
+
+    .intro .colth-2 {
+        margin-top: 30px;
+        padding-bottom: 50px;
+    }
+    .intro .colth-2 > div > .p0 {
+        font-size: 16px;
+        line-height: 1.4;
+        margin-top: 5px;
+    }
+    .intro .colth-2 > div.nth-1 > .img-1,
+    .intro .colth-2 > div.nth-2 > .img-1 {
+        width: 95%;
+    }
+    .intro .colth-2 > div.nth-1 > .p0 {
+        width: 240px;
+    }
+    .intro .colth-2 > div.nth-2 {
+        margin-top: 30px;
+    }
+    .intro .colth-2 > div.nth-2 > .p0 {
+        width: 280px;
+    }
+    .intro .colth-2 > div > .more-a {
+        font-size: 15px;
+        width: 100px;
+        height: 28px;
+        display: block;
+        text-align: center;
+        border: 1px solid #fff;
+        margin-top: 10px;
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+    .intro .colth-2 > div > .more-a:after {
+        content: '';
+        height: 115%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .intro .colth-2 > div > .more-a:hover {
+        color: #00c6ff;
+        border-color: #00c6ff;
+    }
+
+    .package {
+        position: relative;
+        width: 100%;
+        padding: 0 0 64px; /*padding: 60px 0 64px;*/
+    }
+    .package .in-bg {
+        position: relative;
+        width: 100%;
+        background: url(http://img.ocean2you.co.kr/renew/package_bg.jpg) no-repeat top center;
+    }
+    .package .container {
+        padding-top: 40px;
+        width: 90%;
+    }
+    .package .in-tit {
+        text-align: center;
+        word-break: keep-all;
+    }
+    .package .in-tit .mg- {
+        position: relative;
+        width: 50px;
+        height: 1px;
+        background: #fff;
+        margin: 0px auto 20px;
+        background: #104c6a;
+    }
+    .package .in-tit h2 {
+        font-size: 32px;
+        font-family: 'Nanum Gothic', sans-serif;
+        color: #104c6a;
+    }
+    .package .in-tit .p0 {
+        font-size: 16px;
+        color: #282828;
+        margin-top: 15px;
+        line-height: 1.4;
+    }
+    .package .pkg-list {
+        margin: 36px auto 0;
+    }
+    .package .pkg-list > li {
+        position: relative;
+        color: #fff;
+        width: 90%;
+        height: auto;
+        margin: 20px auto 0;
+    }
+    .package .pkg-list > li.nth-2 {
+    }
+    .package .pkg-list > li.nth-3 {
+    }
+    .package .pkg-list > li.nth-4 {
+    }
+    .package .pkg-list > li .bgImg {
+        width: 100%;
+    }
+    .package .pkg-list > li .in-cont {
+        position: absolute;
+        bottom: 24px;
+        left: 20px;
+    }
+    .package .pkg-list .mg- {
+        position: relative;
+        width: 30px;
+        height: 1px;
+        background: #fff;
+    }
+    .package .pkg-list h3 {
+        font-size: 17px;
+        font-family: 'Nanum Gothic', sans-serif;
+        margin-top: 10px;
+    }
+    .package .pkg-list .p0 {
+        font-size: 15px;
+        margin-top: 15px;
+        line-height: 1.4;
+        letter-spacing: -1.5px;
+    }
+    .package .pkg-list .more-a {
+        font-size: 14px;
+        display: inline-block;
+        padding: 0px 8px;
+        height: 26px;
+        border: 1px solid #fff;
+        margin-top: 10px;
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+    .package .pkg-list .more-a:after {
+        content: '';
+        height: 115%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .package .pkg-list .more-a:hover {
+        color: #00c6ff;
+        border-color: #00c6ff;
+    }
+
+    .tourist {
+        position: relative;
+        padding: 64px 0 70px;
+        background: #5ec1fe;
+    }
+    .tourist .container {
+        width: 90%;
+    }
+    .tourist .in-tit {
+        text-align: center;
+        color: #fff;
+    }
+    .tourist .in-tit h2 {
+        font-size: 32px;
+        font-weight: 600;
+    }
+    .tourist .in-tit .p0 {
+        font-size: 16px;
+        margin-top: 20px;
+        line-height: 1.4;
+        word-break: keep-all;
+    }
+    .tourist .tour-list {
+        position: relative;
+        margin: 35px auto 0;
+        width: 100%;
+    }
+    .tourist .tour-list > li {
+        position: relative;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        color: #fff;
+        margin-top: 12px;
+    }
+    .tourist .tour-list > li .bgImg {
+        width: 100%;
+    }
+    .tourist .tour-list > li a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    .tourist .tour-list > li h3 {
+        font-size: 16px;
+        font-weight: 600;
+        margin-top: 86px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .tourist .tour-list > li .mg- {
+        position: relative;
+        width: 30px;
+        height: 1px;
+        background: #fff;
+        margin: 15px auto;
+    }
+    .tourist .tour-list > li .p0 {
+        display: none;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 1.3;
+        letter-spacing: -1px;
+        word-break: keep-all;
+    }
+    .tourist .tour-list > li .p0 .s0 {
+        display: block;
+        margin-bottom: 14px;
+    }
+    .tourist .tour-list > li:hover a {
+        background: url(http://img.ocean2you.co.kr/renew/bg_dim.png) repeat;
+    }
+    .tourist .tour-list > li.lst:hover a {
+        background: none;
+    }
+    .tourist .tour-list > li:hover h3 {
+        margin-top: 35px;
+    }
+    .tourist .tour-list > li:hover .p0 {
+        display: block;
+    }
+    .tourist .tour-list > li .more-a {
+        font-size: 13px;
+        display: inline-block;
+        padding: 0px 8px;
+        height: 26px;
+        border: 1px solid #00c6ff;
+        margin-top: 10px;
+        color: #00c6ff;
+    }
+    .tourist .tour-list > li .more-a:after {
+        content: '';
+        height: 115%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .facil {
+        position: relative;
+        padding: 60px 0;
+        background: url(http://img.ocean2you.co.kr/renew/facil_bg.jpg) repeat top center;
+    }
+    .facil .container {
+        width: 90%;
+    }
+    .facil .in-tit {
+        text-align: center;
+        color: #323232;
+        word-break: keep-all;
+    }
+    .facil .in-tit h2 {
+        font-size: 32px;
+        font-weight: 600;
+    }
+    .facil .in-tit .p0 {
+        font-size: 16px;
+        margin-top: 20px;
+        line-height: 1.4;
+    }
+
+    .facil .bxList.nth-1 {
+        margin-top: 35px;
+    }
+    .facil .bxList .bxBox {
+        position: relative;
+        width: 100%;
+        margin: 20px auto 0;
+    }
+    .facil .bxList .bxBox [class*='bxS-'] img,
+    .facil .bxList .bxBox .bgImg {
+        width: 100%;
+    }
+
+    .facil .bxList .bxBox .txt-box {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 6px 12px 7px;
+        color: #fff;
+        background: url(http://img.ocean2you.co.kr/renew/bg_dim.png) repeat;
+    }
+    .facil .bxList .bxBox .txt-box .p0 {
+        font-size: 13px;
+    }
+    .facil .bxList .bxBox .txt-box .more-a,
+    .facil .bxList .bxBox .in-txt .more-a {
+        display: inline-block;
+        font-size: 12px;
+        margin-top: 5px;
+        padding: 0px 6px;
+        height: 22px;
+        border: 1px solid #fff;
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+    .facil .bxList .bxBox .txt-box .more-a:after,
+    .facil .bxList .bxBox .in-txt .more-a:after {
+        content: '';
+        height: 114%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .facil .bxList .bxBox .txt-box .more-a:hover,
+    .facil .bxList .bxBox .in-txt .more-a:hover {
+        border: 1px solid #00c6ff;
+        color: #00c6ff;
+    }
+
+    .facil .bxList .bxBox .in-txt {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        text-align: center;
+    }
+    .facil .bxList .bxBox .in-txt .p0 {
+        font-size: 13px;
+        font-weight: 600;
+        margin: 34px auto 8px;
+    }
+    .facil .bxList .bxBox .in-txt .p1 {
+        font-size: 12px;
+        line-height: 1.3;
+        margin-top: 10px;
+        word-break: keep-all;
+        letter-spacing: -1px;
+    }
+    .facil .bxList .bxBox .in-txt .more-a {
+        border: 1px solid #00c6ff;
+        color: #00c6ff;
+        margin-top: 10px;
+    }
+
+    .bx-wrapper .bx-controls-direction {
+        margin-top: -12.5px;
+    }
+    .bx-wrapper .bx-controls-direction a {
+        width: 25px;
+        height: 25px;
+    }
+    .bx-wrapper .bx-prev {
+        left: 10px;
+    }
+    .bx-wrapper .bx-next {
+        right: 10px;
+    }
+
+    .wayto {
+        position: relative;
+        padding: 60px 0 70px;
+        background: #f1f1f1;
+    }
+    .wayto .container {
+        width: 90%;
+    }
+    .wayto .in-tit {
+        text-align: center;
+        color: #323232;
+    }
+    .wayto .in-tit h2 {
+        font-size: 32px;
+        font-weight: 600;
+    }
+    .wayto .in-tit .p0 {
+        font-size: 16px;
+        margin-top: 20px;
+        line-height: 1.2;
+        word-break: keep-all;
+    }
+
+    .wayto .map-box {
+        position: relative;
+        width: 100%;
+        margin: 35px auto 0;
+        border: 1px solid #bdbdbd;
+        background: #e6e6e6;
+    }
+    .wayto .map-box > div {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .wayto .map-box .map {
+        height: 240px;
+    }
+    .wayto .map-box .map iframe,
+    .wayto .map-box .map > div {
+        width: 100%;
+        height: 100%;
+    }
+    .wayto .map-box .map .wrap_map {
+        height: 208px;
+    }
+    .wayto .map-box .mapExp {
+        padding: 15px 10px 15px 10px;
+        height: auto;
+    }
+    .wayto .map-box .mapExp > p {
+        font-family: 'Nanum gothic', sans-serif;
+        word-break: keep-all;
+    }
+    .wayto .map-box .mapExp .p0 {
+        font-size: 15px;
+        margin-top: 15px;
+        font-weight: 600;
+    }
+    .wayto .map-box .mapExp .p0:first-child {
+        margin-top: 0;
+    }
+    .wayto .map-box .mapExp .p1 {
+        position: relative;
+        font-size: 14px;
+        line-height: 1.6;
+        margin-top: 8px;
+        padding-left: 10px;
+    }
+    .wayto .map-box .mapExp .p1:before {
+        content: '-';
+        display: inline-block;
+        position: absolute;
+        left: 0;
+    }
+    .wayto .map-box .mapExp .wayBtn {
+        position: relative;
+        display: inline-block;
+        width: 52px;
+        top: -1px;
+        margin-left: 4px;
+    }
+}
+
+@media (max-device-width: 320px) {
+    .main .txt-box {
+        margin-top: -120px;
+        padding-top: 23px;
+    }
+    .main .txt-box .mg- {
+        margin: 8px auto 0;
+    }
+    .main .txt-box .p1 {
+        margin: 12px auto 10px;
+    }
+    .main .txt-box .p2 {
+        margin-bottom: 25px;
+    }
+    .weath-wrap {
+        display: none;
+    }
+    .main #scr-box {
+        display: none;
+    }
+}

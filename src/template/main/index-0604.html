@@ -1,0 +1,845 @@
+@@include('../include/_head.html', {
+"page": "main"
+})
+<!-- 메인섹션 video css -->
+<!-- <link rel="stylesheet" href="http://static.ocean2you.co.kr/css/renew/main/player.css"> -->
+</head>
+
+<body>
+    <h1 class="hidden">오션투유리조트 설악비치 호텔앤콘도</h1>
+
+    <div id="wrap">
+        <!-- 메인섹션 video -->
+        <div class="vid-wrap">
+            <section class="m-vid">
+                <video id="bgMov" playsinline="" webkit-playsinline="" preload="" autoplay="" muted="">
+                    <source src="http://img.ocean2you.co.kr/renew/movie_m/ocean2you_mobile.mp4" type="video/mp4" />
+                </video>
+            </section>
+
+            <section class="bg-player-box">
+                <iframe id="player" class="video-pc"
+                    src="https://www.youtube.com/embed/xPx-uKiJucw?rel=0&enablejsapi=1&version3&playerapiid=ytplayer&autoplay=1&modestbranding=1&vq=hd1080"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </section>
+
+            <script>
+                //백그라운드 비디오 관련
+                $(document).ready(function () {
+                    playerSizeSet();
+
+                    //16초 뒤 사라짐
+                    setTimeout(function () {
+                        $(".bg-player-box").hide();
+                    }, 16000);
+
+                    //리사이즈시 작동
+                    $(window).resize(function () {
+                        playerSizeSet();
+                    })
+
+
+                });
+                let playerSizeSet = function () {
+                    let winW = $(window).width();
+                    let winH = $(window).height();
+                    if (winW < winH) {
+                        $(".video-pc").addClass("video-pc-vertical");
+                    }
+                    else {
+                        $(".video-pc").removeClass("video-pc-vertical");
+                    }
+                }
+
+
+
+            </script>
+
+            @@include('../include/_header.html')
+
+            <section class="main" id="main">
+                <div class="txt-box" id="txt-box">
+                    <img class="pc-img" src="http://img.ocean2you.co.kr/renew/main_txt_pc.png" alt="오션투유리조트 메인텍스트 pc">
+                    <img class="m-img" src="http://img.ocean2you.co.kr/renew/main_txt_m.png" alt="오션투유리조트 메인텍스트 m">
+
+                    <a href="javascript:;" class="more-a booking-a show-xs">
+                        <img class="cal" src="http://img.ocean2you.co.kr/renew/i_cal_2.png" alt="달력아이콘">
+                        객실예약
+                    </a>
+                </div>
+                <!-- 날씨 -->
+                <a href="javascript:;" class="weath-wrap">
+                    <div class="weath-box">
+                        <p class="weath-img">
+                            <img src="http://img.ocean2you.co.kr/renew/weather/cloud2.png" alt="날씨">
+                        </p>
+                        <p class="weath-txt">
+                            <span class="day">2018.02.27 (화)</span>
+                            <span class="location">오산날씨 : 구름많음</span>
+                        </p>
+                        <p class="tem-txt">
+                            <span class="tem-num">12</span>
+                            <span class="tem-cel">°C</span>
+                        </p>
+                    </div>
+                </a>
+                <!--//날씨 -->
+
+                <!-- 2021.06.01 스크롤다운 이미지 주석처리 -->
+                <!-- <div id="scr-box">
+                    <img src="http://img.ocean2you.co.kr/renew/i_mouse.png" alt="아래로스크롤하세요" class="nth-1">
+                    <img src="http://img.ocean2you.co.kr/renew/i_dArr.png" alt="아래로" class="nth-2">
+                    <img src="http://img.ocean2you.co.kr/renew/i_dArr.png" alt="아래로" class="nth-3">
+                </div> -->
+                <!-- //2021.06.01 스크롤다운 이미지 주석처리 -->
+            </section>
+
+            <!-- 메인이벤트 팝업 -->
+            <div class="pop-event-room">
+                <div class="pop-event-area">
+                    <a href="http://ocean2you.co.kr/view/?package=onel" class="pop-box">
+                        <div class="pop-main">
+                            <img class="pc-img"
+                                src="http://img.ocean2you.co.kr/renew/event_pop/event_room_pop_main3.jpg"
+                                alt="룸타입 업글시,30% 객실할인, 객실 1일 + 1일 무료행사">
+                            <img class="m-img"
+                                src="http://img.ocean2you.co.kr/renew/event_pop/event_room_pop_main3_m.jpg"
+                                alt="룸타입 업글시,30% 객실할인, 객실 1일 + 1일 무료행사">
+                        </div>
+                    </a>
+
+                    <a href="http://ocean2you.co.kr/event/event_room2.php" class="pop-box">
+                        <div class="pop-main">
+                            <img class="pc-img" src="http://img.ocean2you.co.kr/renew/event_pop/event_review_pop.jpg"
+                                alt="오션투유 리뷰작성 이벤트, 후기 및 리뷰쓰면 아메리카노 2잔 증정">
+                            <img class="m-img" src="http://img.ocean2you.co.kr/renew/event_pop/event_review_pop_m.jpg"
+                                alt="오션투유 리뷰작성 이벤트, 후기 및 리뷰쓰면 아메리카노 2잔 증정">
+                        </div>
+                    </a>
+
+                    <a href="http://ocean2you.co.kr/event/event_blog.php" class="pop-box">
+                        <div class="pop-main">
+                            <img class="pc-img" src="http://img.ocean2you.co.kr/renew/event_pop/event_blog_pop.jpg"
+                                alt="블로거 포스팅 이벤트, 리노베이션오션뷰콘도 1일숙박 + 조식 2인권 제공">
+                            <img class="m-img" src="http://img.ocean2you.co.kr/renew/event_pop/event_blog_pop_m.jpg"
+                                alt="블로거 포스팅 이벤트, 리노베이션오션뷰콘도 1일숙박 + 조식 2인권 제공">
+                        </div>
+                    </a>
+
+                    <ul class="pop-btn-box-ul">
+                        <li class="not-today-box">
+                            <button type="button" class="btn-not-today">오늘 다시 열지 않음</button>
+                        </li>
+                        <li class="close-pop-box">
+                            <button type="button" class="btn-close-pop">닫기</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <script type="text/javascript"
+                src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+            <script>
+                $(document).ready(function () {
+
+                    //쿠키이름
+                    let cokieName = "pop_event_room";
+
+                    //오늘 다시 열지 않음 체크
+                    if ($.cookie(cokieName) != undefined) {
+                        $('.pop-event-room').hide();
+                    }
+
+                    //오늘 다시 열지 않음 버튼
+                    $(".pop-event-room .btn-not-today").on('click', function () {
+                        console.log("성공");
+                        addCookieData(cokieName);
+                        $('.pop-event-room').hide();
+                    });
+
+                    //닫기
+                    $(".pop-event-room .btn-close-pop").on('click', function () {
+                        $(".pop-event-room").hide();
+                    });
+
+
+
+                });
+
+                //쿠키데이터 등록
+                addCookieData = function (popName) {
+
+                    if ($.cookie(popName) == undefined) {
+                        console.log("작동")
+                        //초단위 테스트용
+                        // let date = new Date;
+                        // date.setTime(date.getTime() + 5*1000);
+
+                        let date = 1;//하루
+                        //쿠키가 없는 경우 쿠키를 추가
+                        $.cookie(popName, 'Y', { expires: date });
+                        //$.removeCookie('pop_liivemate');
+                    }
+                }
+
+            </script>
+
+            <div class="pop-event-room02">
+                <div class="pop-event-area">
+                    <!-- 2021.05.31 이벤트배너02 위치이동 -->
+                </div>
+            </div>
+
+            <div class="pop-event-room03">
+                <div class="pop-event-area">
+                </div>
+            </div>
+            <!-- //메인이벤트 팝업 -->
+
+            <script type="text/javascript"
+                src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+            <script>
+                $(document).ready(function () {
+
+                    //쿠키이름
+                    let cokieName = "pop_event_room02";
+
+                    //오늘 다시 열지 않음 체크
+                    if ($.cookie(cokieName) != undefined) {
+                        $('.pop-event-room02').hide();
+                    }
+
+                    //오늘 다시 열지 않음 버튼
+                    $(".pop-event-room .btn-not-today").on('click', function () {
+                        console.log("성공");
+                        addCookieData(cokieName);
+                        $('.pop-event-room02').hide();
+                    });
+
+                    //닫기
+                    $(".pop-event-room02 .btn-close-pop").on('click', function () {
+                        $(".pop-event-room02").hide();
+                    });
+
+
+
+                });
+
+                //쿠키데이터 등록
+                addCookieData = function (popName) {
+
+                    if ($.cookie(popName) == undefined) {
+                        console.log("작동")
+                        //초단위 테스트용
+                        // let date = new Date;
+                        // date.setTime(date.getTime() + 5*1000);
+
+                        let date = 1;//하루
+                        //쿠키가 없는 경우 쿠키를 추가
+                        $.cookie(popName, 'Y', { expires: date });
+                        //$.removeCookie('pop_liivemate');
+                    }
+                }
+
+            </script>
+        </div>
+        <!-- //메인섹션 video -->
+
+        <!-- 모바일: 아고다 인증 배너 -->
+        <section class="sect-agoda">
+            <div class="sect-area">
+                <div class="agoda-box btn-open-agoda">
+                    <img src="http://img.ocean2you.co.kr/renew/pop/m_pop_agoda_gold.jpg" alt="아고다 이미지">
+                </div>
+            </div>
+        </section>
+        <!-- //모바일: 아고다 인증 배너 -->
+
+        <!-- 2021.06.03 클래스 clr제거 -->
+        <section class="intro" id="setTop">
+            <div class="container">
+                <div class="colth-1">
+                    <!-- 2021.06.03 <div class="mg-"></div> 제거 -->
+                    <h2>
+                        <span class="f-bd">별빛이 쏟아지는</span>
+                        <br>
+                        오션투유 리조트
+                    </h2>
+                    <p class="text">
+                        반짝이는 하얀 백사장 위로 매일 밤<br>
+                        쏟아지는 별빛을 볼 수 있는 오션투유 리조트 콘도
+                    </p>
+                    <a href="#none" class="more-a">자세히보기
+                        <img class="i-rArr" src="http://img.ocean2you.co.kr/renew/i_rArr.png" alt="자세히보기">
+                    </a>
+                </div>
+                <div class="colth-2">
+                    <div class="nth-1">
+                        <img src="http://img.ocean2you.co.kr/renew/intro_01.jpg" alt="하얀백사장에보물같은조개" class="img-1">
+                        <p class="text">
+                            반짝거리는 하얀 백사장에서<br>
+                            만날수 있는 보물같은 조개
+                        </p>
+                        <a href="#none" class="more-a">자세히보기</a>
+                    </div>
+                    <div class="nth-2">
+                        <img src="http://img.ocean2you.co.kr/renew/intro_02.jpg" alt="탁트인해안선과환상적인뷰" class="img-1">
+                        <p class="text">
+                            탁트인 해안선과<br>
+                            별빛이 쏟아지는 환상적인 뷰
+                        </p>
+                        <a href="" class="more-a">자세히보기</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="package">
+            <div class="in-bg">
+                <div class="container">
+                    <div class="in-tit">
+                        <!-- 2021.06.03 <div class="mg-"></div> 제거 -->
+                        <h2>OCEAN2YOU <span class="f-bd">PACKAGE</span></h2>
+                        <p class="p0">가족, 친구, 연인과 함께 할 수 다양한 패키지로 즐기는 오션투유 리조트</p>
+                    </div>
+                    <!-- 2021.06.03 클래스 clr제거 -->
+                    <ul class="pkg-list">
+                        <li class="nth-1">
+                            <img src="http://img.ocean2you.co.kr/renew/package_01_1.jpg" alt="한식당 다연" class="bgImg">
+                            <div class="in-cont">
+                                <!-- 2021.06.03 <div class="mg-"></div> 제거 -->
+                                <h3>조식뷔페 다연</h3>
+                                <p class="p0">
+                                    다채로운 조식 뷔페, 계절 모듬물회,<br>
+                                    신선하고 다양한 계절 모듬회
+                                </p>
+                                <a href="http://ocean2you.co.kr/package/?pack_go=1" class="more-a">자세히보기</a>
+                            </div>
+                        </li>
+                        <li class="nth-2">
+                            <img src="http://img.ocean2you.co.kr/renew/package_02_1.jpg" alt="오션숯불갈비" class="bgImg">
+                            <div class="in-cont">
+                                <!-- 2021.06.03 <div class="mg-"></div> 제거 -->
+                                <h3>오션숯불갈비</h3>
+                                <p class="p0">
+                                    소나무 숲 향기와 바다를 바라보며<br>
+                                    즐기는 바베큐의 매력
+                                </p>
+                                <a href="http://ocean2you.co.kr/package/?pack_go=2" class="more-a">자세히보기</a>
+                            </div>
+                        </li>
+                        <li class="nth-3">
+                            <img src="http://img.ocean2you.co.kr/renew/package_03_1.jpg" alt="속초 횟집" class="bgImg">
+                            <div class="in-cont">
+                                <!-- 2021.06.03 <div class="mg-"></div> 제거 -->
+                                <h3>속초 횟집</h3>
+                                <p class="p0">
+                                    동해의 신선함을 그대로 즐길 수<br>
+                                    있는 속초 횟집
+                                </p>
+                                <a href="http://ocean2you.co.kr/package/?pack_go=3" class="more-a">자세히보기</a>
+                            </div>
+                        </li>
+                        <li class="nth-4">
+                            <img src="http://img.ocean2you.co.kr/renew/package_04_1.jpg" alt="전동바이크" class="bgImg">
+                            <div class="in-cont">
+                                <!-- 2021.06.03 <div class="mg-"></div> 제거 -->
+                                <h3>전동바이크</h3>
+                                <p class="p0">
+                                    시원하게 탁트인 해안가를 달리는<br>
+                                    전동바이크 패키지
+                                </p>
+                                <a href="http://ocean2you.co.kr/package/?pack_go=4" class="more-a">자세히보기</a>
+                            </div>
+                        </li>
+                        <li class="nth-5">
+                            <img src="http://img.ocean2you.co.kr/renew/package_05.jpg" alt="룸서비스" class="bgImg">
+                            <div class="in-cont">
+                                <!-- 2021.06.03 <div class="mg-"></div> 제거 -->
+                                <h3>룸서비스</h3>
+                                <p class="p0">
+                                    빠르고 신선한 음식을 바로 즐길 수<br>
+                                    있는 오션투유만의 룸서비스
+                                </p>
+                                <a href="http://ocean2you.co.kr/package/?pack_go=5" class="more-a">자세히보기</a>
+                            </div>
+                        </li>
+                        <li class="nth-6">
+                            <img src="http://img.ocean2you.co.kr/renew/package_09.jpg" alt="낚시도구 대여" class="bgImg">
+                            <div class="in-cont">
+                                <!-- 2021.06.03 <div class="mg-"></div> 제거 -->
+                                <h3>낚시도구 대여</h3>
+                                <p class="p0">
+                                    여기 주변은 모두 최고의 낚시포인트<br>
+                                    동해바다는 역시 낚시
+                                </p>
+                                <a href="#none" class="more-a">자세히보기</a>
+                            </div>
+                        </li>
+                        <li class="nth-7">
+                            <img src="http://img.ocean2you.co.kr/renew/package_07.jpg" alt="조개캐기" class="bgImg">
+                            <div class="in-cont">
+                                <!-- 2021.06.03 <div class="mg-"></div> 제거 -->
+                                <h3>조개캐기</h3>
+                                <p class="p0">
+                                    은빛 해변에서 즐기는 보물찾기<br>
+                                    조개캐기 패키지
+                                </p>
+                                <a href="#none" class="more-a">자세히보기</a>
+                            </div>
+                        </li>
+                        <li class="nth-8">
+                            <img src="http://img.ocean2you.co.kr/renew/package_08.jpg" alt="불꽃놀이" class="bgImg">
+                            <div class="in-cont">
+                                <!-- 2021.06.03 <div class="mg-"></div> 제거 -->
+                                <h3>불꽃놀이</h3>
+                                <p class="p0">
+                                    밤 하늘을 가득 물들이는 찬란한<br>
+                                    불꽃놀이 패키지
+                                </p>
+                                <a href="#none" class="more-a">자세히보기</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="facil">
+            <div class="container">
+                <div class="in-tit">
+                    <h2>시설안내</h2>
+                    <p class="p0">강원도 설악, 속초, 고성에 위치한 오션투유 리조트 시설안내</p>
+                </div>
+                <!-- 2021.06.03 클래스 clr제거 -->
+                <!-- 시설안내 List-1 -->
+                <div class="bxList nth-1" id="bxList-1">
+                    <div class="bxBox nth-1">
+                        <!-- IMG slide -->
+                        <ul class="bxS-1">
+                            <li><img src="http://img.ocean2you.co.kr/renew/facil_01.jpg" alt="오션투유 콘도" /></li>
+                            <li><img src="http://img.ocean2you.co.kr/renew/facil_01.jpg" alt="오션투유 콘도" /></li>
+                        </ul>
+                        <!-- TEXT -->
+                        <div class="txt-box">
+                            <p class="p0">오션투유 콘도</p>
+                            <a href="" class="more-a">자세히보기</a>
+                        </div>
+                    </div>
+                    <div class="bxBox nth-2">
+                        <!-- IMG slide -->
+                        <ul class="bxS-2">
+                            <li><img src="http://img.ocean2you.co.kr/renew/facil_02.jpg" alt="오션투유 리노베이션 콘도/호텔" /></li>
+                            <li><img src="http://img.ocean2you.co.kr/renew/facil_02.jpg" alt="오션투유 리노베이션 콘도/호텔" /></li>
+                        </ul>
+                        <!-- TEXT -->
+                        <div class="txt-box">
+                            <p class="p0">오션투유 콘도</p>
+                            <a href="" class="more-a">자세히보기</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 시설안내 List-2 -->
+                <div class="bxList nth-2">
+                    <div class="bxBox nth-1">
+                        <img class="bgImg" src="http://img.ocean2you.co.kr/renew/facil_03.jpg" alt="오션투유 콘도" />
+                        <div class="txt-box">
+                            <p class="p0">레스토랑 다연</p>
+                            <a href="" class="more-a">자세히보기</a>
+                        </div>
+                    </div>
+                    <div class="bxBox nth-2">
+                        <img class="bgImg" src="http://img.ocean2you.co.kr/renew/facil_04.jpg" alt="오션투유 콘도" />
+                        <div class="txt-box">
+                            <p class="p0">카페 라바짜</p>
+                            <a href="" class="more-a">자세히보기</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 시설안내 List-3 -->
+                <div class="bxList nth-3">
+                    <div class="bxBox nth-1">
+                        <img class="bgImg" src="http://img.ocean2you.co.kr/renew/facil_05.jpg" alt="오션투유 콘도" />
+                        <div class="txt-box">
+                            <p class="p0">편의점</p>
+                            <a href="" class="more-a">자세히보기</a>
+                        </div>
+                    </div>
+                    <div class="bxBox nth-2">
+                        <img class="bgImg" src="http://img.ocean2you.co.kr/renew/facil_06.jpg" alt="오션투유 콘도" />
+                        <div class="txt-box">
+                            <p class="p0">바베큐장</p>
+                            <a href="" class="more-a">자세히보기</a>
+                        </div>
+                    </div>
+                    <div class="bxBox nth-3">
+                        <img class="bgImg" src="http://img.ocean2you.co.kr/renew/facil_07.jpg" alt="오션투유 콘도" />
+                        <div class="txt-box">
+                            <p class="p0">연회장</p>
+                            <a href="" class="more-a">자세히보기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="wayto">
+            <div class="container">
+                <div class="in-tit">
+                    <h2>오시는길</h2>
+                    <p class="p0">강원도 설악, 속초, 고성에 위치한 오션투유 리조트 위치안내</p>
+                </div>
+                <!-- 2021.06.03 클래스 clr제거 -->
+                <div class="map-box clr">
+                    <a href="javascript:;" onclick="$('#pop-bustour').show()">
+                        <img src="http://img.ocean2you.co.kr/renew/bt_waytobus_m.jpg" alt="속초버스투어자세히보기"
+                            class="show-xs wd-f">
+                        <!-- <img src="http://img.ocean2you.co.kr/renew/bt_waytobus.jpg" alt="속초버스투어자세히보기" class="hidden-xs"> -->
+                    </a>
+                    <!-- 이미지
+                        <div class="map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3130.3620469800658!2d128.52880931560614!3d38.31744607966428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5fd894b74d5ee2c3%3A0xf978c9441b2a53bd!2z7Jik7IWYIO2IrOycoCDrpqzsobDtirgg7ISk7JWF67mE7LmYIO2YuO2FlCDslaQg7L2Y64-E!5e0!3m2!1sko!2skr!4v1503997101294"
+                            frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div> 
+                    -->
+                    <div class="map" id="map"
+                        style="position: relative; overflow: hidden; background: url(&quot;http://t1.daumcdn.net/mapjsapi/images/bg_tile.png&quot;);">
+                        <div
+                            style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; touch-action: none; cursor: url(&quot;http://t1.daumcdn.net/mapjsapi/images/cursor/openhand.cur.ico&quot;) 7 5, url(&quot;http://t1.daumcdn.net/mapjsapi/images/cursor/openhand.cur.ico&quot;), default;">
+                            <div style="position: absolute;">
+                                <div style="position: absolute; z-index: 1; left: 0px; top: 0px;"><img
+                                        src="http://map1.daumcdn.net/map_2d/2103dor/L5/581/353.png" alt=""
+                                        draggable="false"
+                                        style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: -247px; top: 344px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                        src="http://map2.daumcdn.net/map_2d/2103dor/L5/581/354.png" alt=""
+                                        draggable="false"
+                                        style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 9px; top: 344px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                        src="http://map3.daumcdn.net/map_2d/2103dor/L5/581/355.png" alt=""
+                                        draggable="false"
+                                        style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 265px; top: 344px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                        src="http://map0.daumcdn.net/map_2d/2103dor/L5/581/356.png" alt=""
+                                        draggable="false"
+                                        style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 521px; top: 344px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                        src="http://map1.daumcdn.net/map_2d/2103dor/L5/582/353.png" alt=""
+                                        draggable="false"
+                                        style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: -247px; top: 88px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                        src="http://map2.daumcdn.net/map_2d/2103dor/L5/582/354.png" alt=""
+                                        draggable="false"
+                                        style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 9px; top: 88px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                        src="http://map3.daumcdn.net/map_2d/2103dor/L5/582/355.png" alt=""
+                                        draggable="false"
+                                        style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 265px; top: 88px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                        src="http://map0.daumcdn.net/map_2d/2103dor/L5/582/356.png" alt=""
+                                        draggable="false"
+                                        style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 521px; top: 88px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                        src="http://map1.daumcdn.net/map_2d/2103dor/L5/583/353.png" alt=""
+                                        draggable="false"
+                                        style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: -247px; top: -168px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                        src="http://map2.daumcdn.net/map_2d/2103dor/L5/583/354.png" alt=""
+                                        draggable="false"
+                                        style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 9px; top: -168px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                        src="http://map3.daumcdn.net/map_2d/2103dor/L5/583/355.png" alt=""
+                                        draggable="false"
+                                        style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 265px; top: -168px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                        src="http://map0.daumcdn.net/map_2d/2103dor/L5/583/356.png" alt=""
+                                        draggable="false"
+                                        style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 521px; top: -168px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                        src="http://map1.daumcdn.net/map_2d/2103dor/L5/584/353.png" alt=""
+                                        draggable="false"
+                                        style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: -247px; top: -424px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                        src="http://map2.daumcdn.net/map_2d/2103dor/L5/584/354.png" alt=""
+                                        draggable="false"
+                                        style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 9px; top: -424px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                        src="http://map3.daumcdn.net/map_2d/2103dor/L5/584/355.png" alt=""
+                                        draggable="false"
+                                        style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 265px; top: -424px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                        src="http://map0.daumcdn.net/map_2d/2103dor/L5/584/356.png" alt=""
+                                        draggable="false"
+                                        style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 521px; top: -424px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;">
+                                </div>
+                                <div style="position: absolute; z-index: 0; left: 0px; top: 0px;"><img
+                                        src="http://map1.daumcdn.net/map_2d/2103dor/L4/1163/709.png" alt=""
+                                        draggable="false"
+                                        style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 136px; top: 344px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 128px; height: 128px;"><img
+                                        src="http://map2.daumcdn.net/map_2d/2103dor/L4/1163/710.png" alt=""
+                                        draggable="false"
+                                        style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 264px; top: 344px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 128px; height: 128px;"><img
+                                        src="http://map3.daumcdn.net/map_2d/2103dor/L4/1163/711.png" alt=""
+                                        draggable="false"
+                                        style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 392px; top: 344px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 128px; height: 128px;"><img
+                                        src="http://map0.daumcdn.net/map_2d/2103dor/L4/1163/712.png" alt=""
+                                        draggable="false"
+                                        style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 520px; top: 344px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 128px; height: 128px;"><img
+                                        src="http://map1.daumcdn.net/map_2d/2103dor/L4/1164/709.png" alt=""
+                                        draggable="false"
+                                        style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 136px; top: 216px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 128px; height: 128px;"><img
+                                        src="http://map2.daumcdn.net/map_2d/2103dor/L4/1164/710.png" alt=""
+                                        draggable="false"
+                                        style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 264px; top: 216px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 128px; height: 128px;"><img
+                                        src="http://map3.daumcdn.net/map_2d/2103dor/L4/1164/711.png" alt=""
+                                        draggable="false"
+                                        style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 392px; top: 216px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 128px; height: 128px;"><img
+                                        src="http://map0.daumcdn.net/map_2d/2103dor/L4/1164/712.png" alt=""
+                                        draggable="false"
+                                        style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 520px; top: 216px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 128px; height: 128px;"><img
+                                        src="http://map1.daumcdn.net/map_2d/2103dor/L4/1165/709.png" alt=""
+                                        draggable="false"
+                                        style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 136px; top: 88px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 128px; height: 128px;"><img
+                                        src="http://map2.daumcdn.net/map_2d/2103dor/L4/1165/710.png" alt=""
+                                        draggable="false"
+                                        style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 264px; top: 88px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 128px; height: 128px;"><img
+                                        src="http://map3.daumcdn.net/map_2d/2103dor/L4/1165/711.png" alt=""
+                                        draggable="false"
+                                        style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 392px; top: 88px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 128px; height: 128px;"><img
+                                        src="http://map0.daumcdn.net/map_2d/2103dor/L4/1165/712.png" alt=""
+                                        draggable="false"
+                                        style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 520px; top: 88px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 128px; height: 128px;"><img
+                                        src="http://map1.daumcdn.net/map_2d/2103dor/L4/1166/709.png" alt=""
+                                        draggable="false"
+                                        style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 136px; top: -40px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 128px; height: 128px;"><img
+                                        src="http://map2.daumcdn.net/map_2d/2103dor/L4/1166/710.png" alt=""
+                                        draggable="false"
+                                        style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 264px; top: -40px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 128px; height: 128px;"><img
+                                        src="http://map3.daumcdn.net/map_2d/2103dor/L4/1166/711.png" alt=""
+                                        draggable="false"
+                                        style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 392px; top: -40px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 128px; height: 128px;"><img
+                                        src="http://map0.daumcdn.net/map_2d/2103dor/L4/1166/712.png" alt=""
+                                        draggable="false"
+                                        style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 520px; top: -40px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 128px; height: 128px;">
+                                </div>
+                                <div style="position: absolute; z-index: 1;"></div>
+                                <div style="width: 715px; height: 517px; position: absolute; z-index: 1;"></div>
+                                <div style="position: absolute; z-index: 1;"><svg version="1.1"
+                                        style="stroke: none; stroke-dashoffset: 0.5; stroke-linejoin: round; fill: none; transform: translateZ(0px); position: absolute; left: -1430px; top: -1034px; width: 3575px; height: 2585px;"
+                                        viewBox="0 0 3575 2585">
+                                        <defs></defs>
+                                    </svg></div>
+                                <div
+                                    style="position: absolute; z-index: 1; width: 100%; height: 0px; transform: translateZ(0px);">
+                                    <div
+                                        style="position: absolute; margin: -39px 0px 0px -14px; z-index: 0; left: 358px; top: 259px;">
+                                        <img draggable="false" src="http://t1.daumcdn.net/mapjsapi/images/marker.png"
+                                            alt="" title=""
+                                            style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(0px, 29px, 42px, 0px); top: 0px; left: 0px; width: 29px; height: 42px;"><img
+                                            src="http://t1.daumcdn.net/mapjsapi/images/transparent.gif" alt=""
+                                            draggable="false" usemap="#daum.maps.Marker.Area:1"
+                                            style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; width: 29px; height: 42px;"><map
+                                            id="daum.maps.Marker.Area:1" name="daum.maps.Marker.Area:1"><area
+                                                href="javascript:void(0)" alt="" shape="poly"
+                                                coords="14,39,9,27,4,21,1,16,1,10,4,4,11,0,18,0,25,4,28,10,28,16,25,21,20,27"
+                                                title="" style="-webkit-tap-highlight-color: transparent;"></map>
+                                    </div>
+                                    <div
+                                        style="cursor: default; position: absolute; background: rgb(255, 255, 255); border: 1px solid rgb(118, 129, 168); z-index: 0; display: block; width: 150px; height: 23px; left: 283px; top: 188px;">
+                                        <div
+                                            style="position: absolute; width: 11px; height: 9px; background: url(&quot;http://t1.daumcdn.net/localimg/localimages/07/mapjsapi/triangle.png&quot;) 0% 0% / 11px 9px no-repeat; left: 69px; top: 23px;">
+                                        </div>
+                                        <div class="" style="position: absolute; left: 0px; top: 0px;">
+                                            <div style="text-align:center; font-size:11px; padding:5px;">오션투유리조트 호텔앤콘도
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            style="position: absolute; cursor: default; z-index: 1; margin: 0px 6px; height: 19px; line-height: 14px; left: 0px; bottom: 0px; color: rgb(0, 0, 0);">
+                            <div style="color: rgb(0, 0, 0); text-align: center; font-size: 10px; float: left;">
+                                <div
+                                    style="float: left; margin: 2px 3px 0px 4px; height: 6px; transition: width 0.1s ease 0s; border-top: none rgb(0, 0, 0); border-right: 2px solid rgb(0, 0, 0); border-bottom: 2px solid rgb(0, 0, 0); border-left: 2px solid rgb(0, 0, 0); border-image: initial; width: 58px;">
+                                </div>
+                                <div
+                                    style="float: left; margin: 0px 4px 0px 0px; font-family: AppleSDGothicNeo-Regular, 돋움, dotum, sans-serif; font-weight: bold; color: rgb(0, 0, 0);">
+                                    250m</div>
+                            </div>
+                            <div style="margin: 0px 4px; float: left;"><a target="_blank" href="http://map.kakao.com/"
+                                    title="Kakao 지도로 보시려면 클릭하세요." style="float: left; width: 32px; height: 10px;"><img
+                                        src="http://t1.daumcdn.net/mapjsapi/images/m_bi_b.png" alt="Kakao 지도로 이동"
+                                        style="float: left; width: 32px; height: 10px; border: none;"></a>
+                                <div style="font: 11px / 11px Arial, Tahoma, Dotum, sans-serif; float: left;">, 국토지리정보원,
+                                    OpenStreetMap</div>
+                            </div>
+                        </div>
+                        <div style="cursor: auto; position: absolute; z-index: 2; left: 0px; top: 0px;">
+                            <div
+                                style="width: 32px; border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 2px 0px; position: absolute; left: 680px; top: 3px;">
+                                <button draggable="false" title="확대" type="button"
+                                    style="float: left; cursor: pointer; width: 32px; height: 32px; user-select: none; -webkit-user-drag: none; border-top: none; border-right: none; border-bottom: 1px solid rgb(226, 226, 226); border-left: none; border-image: initial; background: url(&quot;http://t1.daumcdn.net/mapjsapi/images/control.png&quot;) -40px 0px / 116px 264px no-repeat rgb(255, 255, 255); border-radius: 3px 3px 0px 0px;"></button>
+                                <div
+                                    style="float: left; background: url(&quot;http://t1.daumcdn.net/mapjsapi/images/bg_zoom_control.png&quot;) repeat; padding: 7px 0px; transition: height 0s ease 0s, margin 0.1s ease 0s;">
+                                    <div
+                                        style="cursor: pointer; position: relative; background-size: 116px 264px; transition: height 0.1s ease 0s; margin: 2px 0px; display: block; width: 32px; height: 104px;">
+                                        <div
+                                            style="position: absolute; width: 4px; height: 100%; background-color: rgb(51, 150, 255); left: 50%; margin: 0px 0px 0px -2px;">
+                                            <div
+                                                style="width: 4px; height: 2px; margin-bottom: -2px; bottom: 0px; position: absolute; background: url(&quot;http://t1.daumcdn.net/mapjsapi/images/control.png&quot;) -50px -127px / 116px 264px;">
+                                            </div>
+                                            <div
+                                                style="width: 4px; height: 2px; margin-top: -2px; top: 0px; position: absolute; background: url(&quot;http://t1.daumcdn.net/mapjsapi/images/control.png&quot;) -40px -100px / 116px 264px;">
+                                            </div>
+                                        </div>
+                                        <div
+                                            style="position: absolute; background-color: rgb(204, 204, 204); transition: height 0.1s ease 0s; left: 50%; margin: 0px 0px 0px -2px; width: 4px; height: 32px;">
+                                        </div>
+                                        <div
+                                            style="cursor: row-resize; position: absolute; width: 20px; height: 10px; margin: -4px 0px 0px -10px; background: url(&quot;http://t1.daumcdn.net/mapjsapi/images/control.png&quot;) -40px -80px / 116px 264px; left: 50%; transition: top 0.1s ease 0s; top: 32px;">
+                                        </div>
+                                    </div>
+                                </div><button draggable="false" title="축소" type="button"
+                                    style="float: left; cursor: pointer; width: 32px; height: 32px; user-select: none; -webkit-user-drag: none; border-top: 1px solid rgb(226, 226, 226); border-right: none; border-bottom: none; border-left: none; border-image: initial; background: url(&quot;http://t1.daumcdn.net/mapjsapi/images/control.png&quot;) -40px -32px / 116px 264px no-repeat rgb(255, 255, 255); border-radius: 0px 0px 3px 3px; margin: 0px;"></button>
+                                <div
+                                    style="position: absolute; margin: 41px 0px 0px -30px; background-size: 116px 264px; width: 30px; height: 104px; display: none;">
+                                    <div
+                                        style="position: absolute; width: 29px; height: 15px; margin: -6px 0px 0px; background: url(&quot;http://t1.daumcdn.net/mapjsapi/images/control.png&quot;) 0px -80px / 116px 264px; left: 0px; top: 8px;">
+                                    </div>
+                                    <div
+                                        style="position: absolute; width: 29px; height: 15px; margin: -6px 0px 0px; background: url(&quot;http://t1.daumcdn.net/mapjsapi/images/control.png&quot;) 0px -100px / 116px 264px; left: 0px; top: 32px;">
+                                    </div>
+                                    <div
+                                        style="position: absolute; width: 29px; height: 15px; margin: -6px 0px 0px; background: url(&quot;http://t1.daumcdn.net/mapjsapi/images/control.png&quot;) 0px -120px / 116px 264px; left: 0px; top: 64px;">
+                                    </div>
+                                    <div
+                                        style="position: absolute; width: 29px; height: 15px; margin: -6px 0px 0px; background: url(&quot;http://t1.daumcdn.net/mapjsapi/images/control.png&quot;) 0px -140px / 116px 264px; left: 0px; top: 80px;">
+                                    </div>
+                                    <div
+                                        style="position: absolute; width: 29px; height: 15px; margin: -6px 0px 0px; background: url(&quot;http://t1.daumcdn.net/mapjsapi/images/control.png&quot;) 0px -160px / 116px 264px; left: 0px; top: 96px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 오시는길 TEXT -->
+                    <div class="mapExp">
+                        <p class="p0">자가 차량 이용시</p>
+                        <p class="p1">네비게이션 주소 또는 오션투유 리조트 입력</p>
+                        <p class="p0">대중교통 이용시</p>
+                        <p class="p1">
+                            <span class="f-bd">간성시외버스터미널 하차시</span>
+                            - 신안리 정류장에서 1번, 1-1 버스 승차,
+                            <span class="lg-block">삼포리정류장에서 하차, 105m 이동
+                                <a class="wayBtn" href="http://dmaps.kr/6x66r" target="_blank">
+                                    <img src="http://img.ocean2you.co.kr/renew/wayto_btn.jpg" alt="길찾기">
+                                </a>
+                            </span>
+                        </p>
+                        <p class="p1">
+                            <span class="f-bd">속초시외버스터미널 하차시</span>
+                            - 한국전력 정류장에서 1번, 1-1번 버스 승차,
+                            <span class="lg-block">삼포리정류장에서 하차, 105m 이동
+                                <a class="wayBtn" href="http://dmaps.kr/6x67i" target="_blank">
+                                    <img src="http://img.ocean2you.co.kr/renew/wayto_btn.jpg" alt="길찾기">
+                                </a>
+                            </span>
+                        </p>
+                        <p class="p1">
+                            <span class="f-bd">속초고속버스터미널 하차시</span>
+                            - 속초 고속버스터미널 정류장 1번.
+                            <span class="lg-block">1-1번 버스 승차, 삼포리정류장에서 하차, 105m 이동
+                                <a class="wayBtn" href="http://dmaps.kr/6x2av" target="_blank">
+                                    <img src="http://img.ocean2you.co.kr/renew/wayto_btn.jpg" alt="길찾기">
+                                </a>
+                            </span>
+                        </p>
+                    </div>
+                    <!-- //오시는길 TEXT -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 2021.06.02 주차장 섹션추가 -->
+        <section class="parking">
+            <div class="container">
+                <div class="in-tit">
+                    <h2>주차안내</h2>
+                    <p class="p0">자기차량으로 방문하시는 고객님을 위한 주차장 이용안내</p>
+                </div>
+
+                <div class="info-box">
+                    <figure>
+                        <img class="pc-img" src="http://img.ocean2you.co.kr/renew/parking_pc.jpg"
+                            alt="오션투유리조트 주차장 주차안내 pc이미지">
+                        <img class="m-img" src="http://img.ocean2you.co.kr/renew/parking_m.jpg"
+                            alt="오션투유리조트 주차장 주차안내 m이미지">
+                    </figure>
+
+                    <div class="parking-info">
+                        <p class="tit">주차장 이용안내</p>
+                        <p>
+                            주차는 오션투유의 ①주차장과 간이주차장을 중심으로 이용해 주십시오.<br>
+                            차량의 만차상황에 따라 ②,③,④공용주차장을 이용하실 수도 있습니다.
+                        </p>
+                        <p class="info-notice">
+                            단, 여름성수기 7~8월에는 ②,③,④주차장이 유료로 운영됩니다.<br>
+                            성수기 투숙손님께서는 반드시 ①주차장을 먼저 방문하신 후 무료주차 스티커 교부와 주차안내를 받으시기 바랍니다.
+                        </p>
+                        <p class="info-notice">
+                            주차장 위치 상세 주소 (차량용 네비 이용)
+                            <span>- ② 주차장 : 죽왕면 삼포리 243-16</span>
+                            <span>- ③ 주차장 : 죽왕면 삼포리 243-12</span>
+                            <span>- ④ 주차장 : 죽왕면 삼포리 243-11</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //2021.06.02 주차장 섹션추가 -->
+
+        <!--팝업-->
+        <!-- @include('../include/_popup/_pop_lodgment.html') -->
+
+        <!-- 아고다 인증 배너 -->
+        <div class="pop-agoda-banner">
+            <div class="pop-area">
+                <div class="pop-banner btn-open-agoda">
+                    <img src="http://img.ocean2you.co.kr/renew/pop/bt_agoda.png" alt="이미지">
+                </div>
+            </div>
+        </div>
+        <!-- 아고다 인증 팝업 -->
+        <div class="pop-agoda-wrap2 close-pop2">
+            <div class="pop-area">
+                <div class="pop-main">
+                    <div class="img-main">
+                        <img src="http://img.ocean2you.co.kr/renew/pop/pop_agoda_gold2.png" alt="이미지">
+                    </div>
+                    <button type="button" class="btn-close close-pop">닫기</button>
+                </div>
+            </div>
+        </div>
+        <!-- js 아고다 -->
+        <script>
+            $(document).ready(function () {
+                //열기
+                $(".btn-open-agoda").on("click", function () {
+                    $(".pop-agoda-wrap2").show();
+                    $(".pop-agoda-banner").addClass("banner-hide");
+                });
+
+                //PC상에서 닫기
+                $(".pop-agoda-wrap2 .close-pop").on("click", function () {
+                    $(".pop-agoda-wrap2").hide();
+                    $(".pop-agoda-banner").removeClass("banner-hide");
+                });
+
+                //모바일상에서 닫기
+                $(".pop-agoda-wrap2.close-pop2").on("click", function () {
+                    let winW = window.outerWidth;
+                    console.log(winW);
+                    if (winW < 991) {
+                        $(".pop-agoda-wrap2").hide();
+                        $(".pop-agoda-banner").removeClass("banner-hide");
+                    }
+                });
+            });
+        </script>
+
+        @@include('../include/_footer.html', {
+        "page": "main"
+        })
+    </div>
+
+</body>
+
+</html>
