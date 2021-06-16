@@ -3019,12 +3019,20 @@ border-top: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5;}
 .pay_list{width:96%; margin:auto}
 .pay_list li{width:93%; border:1px solid #cccccc; padding:3%; height:30px; floaT:left; border-radius:5px; margin-bottom:7px}
 .pay_list li .pay_list_icon{floaT:left; display:inline-block; width:8%; margin-right:15px; margin-top:2px}
+
+
+.pay_list #kakao_mobile li .pay_list_icon {
+        width: 35px;
+    margin-right: 13px;
+}
+
+
 .pay_list li .pay_list_txt{floaT:left; font-size:0.875em; line-height:2.0; letter-spacing:-1.5; color:#3f3f3f; font-weight:600}
 .pay_list li .pay_list_txt_h{floaT:left; font-size:0.875em; line-height:1.0; color:#3f3f3f; font-weight:600;  width:60%; }
 .pay_list li .pay_list_stxt1{color:#3f3f3f; font-weight:300; font-size:0.875em;}
 .pay_list li .pay_list_stxt{color:#3f3f3f; font-weight:300;}
 .pay_list li .pay_list_caicon{floaT:left; text-align:right; display:inline-block; width:17%; margin-top:4px}
-.pay_list li .pay_list_chicon{floaT:right; display:inline-block; width:5%; margin-top:8px}
+.pay_list li .pay_list_chicon {floaT:right; display:inline-block; width:5%; margin-top:8px}
 .pay_list li.on{width:93%; border:1px solid #f95c24; padding:3%; height:30px; floaT:left;  border-radius:5px; background:#fff8f3}
 .pay_list li.on .pay_list_txt{floaT:left; font-size:0.875em;  letter-spacing:-1.5; color:#ff4800; font-weight:600}
 .pay_list li.on .pay_list_txt_h{floaT:left; font-size:0.875em;  letter-spacing:-1.5; color:#ff4800; font-weight:600}

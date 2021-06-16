@@ -125,7 +125,7 @@ function css() {
     return (
         src(config.css.src, { since: lastRun(css) })
             // .pipe(autoprefixer())
-            // .pipe(csso())
+            .pipe(csso())
             // .pipe(rename({suffix: '.min'}))
             .pipe(dest(config.css.dest))
             .pipe(browserSync.stream({ match: '**/*.css' }))

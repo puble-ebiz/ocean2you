@@ -19,7 +19,7 @@
     margin-top: 0px;
     padding: 35px;
     width: 740px;
-    height: 610px;
+    height: auto;
     margin: 0 auto;
     background: #fff;
     border: 1px solid #dedede;
@@ -51,7 +51,7 @@
 
 /* 로그인 common */
 [class*='members'] .alert {
-    margin: 30px auto 0;
+    margin: 1rem auto;
     display: flex;
     justify-content: center;
     width: 475px;
