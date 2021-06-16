@@ -128,7 +128,8 @@
 .eventCont .event-list li {
     margin: 0 0 35px;
     width: 360px;
-    border: 1px solid rgba(0, 0, 0, 0);
+    min-height: 340px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
     transition: all 0.2s ease-in-out;
 }
@@ -141,6 +142,29 @@
     box-sizing: border-box;
 }
 
+.eventCont .event-list li a {
+    position: relative;
+    display: block;
+}
+.eventCont .event-list li a [class*='label-'] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 80px;
+    height: 27px;
+    background-color: #705b5b;
+    font-size: 16px;
+    line-height: 25px;
+    color: #fff;
+}
+.eventCont .event-list li a .label-ocean {
+    background-color: #44a8ff;
+}
+
+.eventCont .event-list .thumb img {
+    width: 100%;
+}
 .eventCont .event-list .info {
     padding: 25px 20px;
 }
@@ -244,6 +268,7 @@
     .event-wrap .container {
         padding: 0 20px;
         width: 100%;
+        box-sizing: border-box;
     }
     /* 이벤트 목록 list */
     .eventCont .event-list {
@@ -253,6 +278,7 @@
     .eventCont .event-list li {
         margin: 0 0 2%;
         width: 32%;
+        min-height: auto;
     }
     .eventCont .event-list li:nth-child(3n - 1) {
         margin: 0 2% 2%;
@@ -266,11 +292,6 @@
     }
     .title .event-menu a {
         width: 16.5%;
-    }
-    /* Event-wrawp */
-    .event-wrap .container {
-        padding: 0;
-        width: 95%;
     }
     /* 이벤트 목록 list */
     .eventCont .event-list .info {
@@ -338,13 +359,19 @@
     }
     /* 이벤트 목록 list */
     .eventCont .event-list li {
-        width: 48%;
+        margin-bottom: 10%;
+        width: 100%;
+        border: 0 none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
     .eventCont .event-list li:nth-child(3n - 1) {
-        margin: 0 0 2%;
+        margin: 0 0 10%;
     }
-    .eventCont .event-list li:nth-child(2n) {
-        margin: 0 0 2% 2%;
+    .eventCont .event-list li:last-child {
+        margin-bottom: 5%;
+    }
+    .eventCont .event-list .info {
+        padding: 30px 10px;
     }
 
     /* 이벤트 상세보기 view */
@@ -389,8 +416,11 @@
     .eventCont .event-list {
         margin-top: 40px;
     }
-    .eventCont .event-list .info {
-        padding: 20px 10px;
+    .eventCont .event-list li:hover {
+        box-shadow: none;
+    }
+    .eventCont .event-list li:last-child {
+        border-bottom: 0 none;
     }
     .eventCont .event-list .info .info-tit {
         font-size: 15px;
