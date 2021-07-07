@@ -240,6 +240,14 @@ exports.etc = etc;
 exports.testPathServer = testPathServer;
 exports.testPathLocal = testPathLocal;
 exports.default = parallel(bSync, watching);
+<<<<<<< HEAD
+exports.serve = parallel(series(parallel(template), css, js, img, etc, bSync), watching);
+exports.build = parallel(series(parallel(template), css, js, img, etc, bSync), watching);
+
+exports.land = parallel(series(parallel(template), css, js, img, etc, bSyncLanding), watching);
+
+exports.test = series(parallel(template), css, js, img, etc, copyTest, testPathServer, bSyncTest);
+=======
 exports.serve = parallel(
   series(parallel(template), css, js, img, etc, bSync),
   watching
@@ -264,3 +272,4 @@ exports.test = series(
   testPathServer,
   bSyncTest
 );
+>>>>>>> 08b3023357105881ebe8e4ca8fb33607bf77e429
