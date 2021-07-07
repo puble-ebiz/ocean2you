@@ -238,9 +238,9 @@ exports.etc = etc;
 exports.testPathServer = testPathServer;
 exports.testPathLocal = testPathLocal;
 exports.default = parallel(bSync, watching);
-exports.serve = parallel(series(parallel(template), sassDev, css, js, img, etc, bSync), watching);
-exports.build = parallel(series(parallel(template), sassDev, css, js, img, etc, bSync), watching);
+exports.serve = parallel(series(parallel(template), css, js, img, etc, bSync), watching);
+exports.build = parallel(series(parallel(template), css, js, img, etc, bSync), watching);
 
-exports.land = parallel(series(parallel(template), sassDev, css, js, img, etc, bSyncLanding), watching);
+exports.land = parallel(series(parallel(template), css, js, img, etc, bSyncLanding), watching);
 
-exports.test = series(parallel(template), sassPrd, css, js, img, etc, copyTest, testPathServer, bSyncTest);
+exports.test = series(parallel(template), css, js, img, etc, copyTest, testPathServer, bSyncTest);
