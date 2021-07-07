@@ -30,6 +30,43 @@
     font-weight: 400;
 }
 
+
+
+/* 21.07.07 예약 진행 순서 */
+/* 진행 순서 안내 */
+.guide_wrap {margin:0 auto; padding-bottom:5px; clear:both;}
+.guide_wrap .guide_title {font-size:18px; line-height:18px; font-weight:600; color:#232323; text-align:left;}
+.guide_wrap .img {display:block; width:70px; height:45px; margin:0 auto; text-align:center; background:url(http://img.coresco.co.kr/reservation/rsv_list.png); background-repeat:no-repeat;}
+.guide_wrap .order_tit {font-size:16px; color:#555; font-weight:600; line-height:20px; word-break:keep-all;}
+.guide_wrap .order_tit i {display:inline-block; margin-right:4px; font-style:italic;}
+
+.guide_wrap .order_list {position:relative; box-sizing:border-box; width:100%; margin-top:12px; padding:14px 10px; border:1px solid #b9b9b9; background:#fff}
+.guide_wrap .order_list li {position:relative; padding:0 36px; text-align:center; float:left;}
+.guide_wrap .order_list:after{content:''; display:block; clear:both;}
+.guide_wrap .order_list li:before {content:''; display:block; position:absolute; width:16px; height:100%; left:0; background:url(http://img.coresco.co.kr/reservation/img_list_arrow.png) center no-repeat;}
+.guide_wrap .order_list li:first-child:before {content:none;}
+.guide_wrap .order_list li .img {margin-bottom:3px;}
+.guide_wrap .order_list .list01 .img {background-position:0px 0;}
+.guide_wrap .order_list .list02 .img {background-position:-70px 0;}
+.guide_wrap .order_list .list03 .img {background-position:-140px 0;}
+.guide_wrap .order_list .list04 .img {background-position:-210px 0;}
+.guide_wrap .order_list .list05 .img {background-position:-280px 0;}
+
+.guide_wrap .list_wrap {position:relative; box-sizing:border-box; width:100%; margin-bottom:55px; padding:0 30px; border:1px solid #b9b9b9; border-top:0; background:#eef0f6}
+.guide_wrap .list_wrap li {position:relative; box-sizing:border-box; padding:20px 25px 20px 0; border-top:1px solid #c6c7ca}
+.guide_wrap .list_wrap li:first-child {border-top:0}
+.guide_wrap .list_wrap li > div {display:table-cell; vertical-align:middle;}
+.guide_wrap .list_wrap .img_box {width:175px;}
+.guide_wrap .list_wrap .list01 .img {background-position:-5px -55px;}
+.guide_wrap .list_wrap .list02 .img {background-position:-75px -55px;}
+.guide_wrap .list_wrap .list03 .img {background-position:-145px -55px;}
+.guide_wrap .list_wrap .list04 .img {background-position:-215px -55px;}
+.guide_wrap .list_wrap .list05 .img {background-position:-285px -55px;}
+.guide_wrap .list_wrap .tit{font-size:16px; font-weight:bold;}
+.guide_wrap .list_wrap .tit i {font-style:italic;}
+.guide_wrap .list_wrap .txt_box {padding-left:5px; text-align:left;}
+.guide_wrap .list_wrap .txt {font-size:15px; font-weight:bold; line-height:1.3; margin-top:6px;}
+
 @media (max-width: 767px) {
     .xs-block {
         display: block;
