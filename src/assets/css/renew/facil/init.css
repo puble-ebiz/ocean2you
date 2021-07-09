@@ -205,19 +205,23 @@
 .sec-top .info_box ul li strong{font-weight:bold;}
 .sec-top .info_box ul li:before{content:''; position:absolute; left:0; top:8px; width:2px; height:2px; background:#151515;}
 .sec-top .info_box .btn-rsv{position:relative; display:block; padding:20px 0; background:#3297f1; text-align:center; font-size:24px; color:#fff; margin-top:30px;}
-.sec-top .info_box .btn-rsv:before{content:''; position:absolute; right:30px; top:23px; width:10px; height:17px; background:url('http://dh715.ebiz.test/img/ocean2you/btn_arr.png') no-repeat; background-size:contain;}
+.sec-top .info_box .btn-rsv:before{content:''; position:absolute; right:30px; top:23px; width:10px; height:17px; background:url('http://img.ocean2you.co.kr/renew/facil/fcdetail/btn_arr.png') no-repeat; background-size:contain;}
 
 .sec-sub.amenity{padding-bottom:30px;}
 .sec-sub.amenity .subtxt{margin-bottom:40px;}
 .sec-sub.amenity .subtxt .blue_txt{color:#3297f1; font-weight:500;}
 .sec-sub.amenity .item{display:inline-block; text-align:left;}
 .sec-sub.amenity .item dt{font-size:20px; color:#3a3737; font-weight:bold; margin-bottom:18px;}
-.sec-sub.amenity .item .item_list li{display:inline-block; text-align:center; width:120px; height:150px; box-sizing:border-box; padding:30px 0 12px; border:1px solid #aaa;}
+.sec-sub.amenity .item .item_list{margin:0 -4px;}
+.sec-sub.amenity .item .item_list li{display:inline-block; text-align:center; width:120px; height:150px; box-sizing:border-box; padding:30px 0 12px; border:1px solid #aaa; margin:0 4px; vertical-align:middle;}
 .sec-sub.amenity .item .item_list li .ico{display:inline-block;}
 .sec-sub.amenity .item .item_list li .cate{font-size:17px; color:#333; margin-top:20px;}
+.sec-sub.amenity .item .item_list.respon_ver{display:inline-block;}
+
 .sec-sub .img_wrap{margin:40px 0 85px;}
 
-.sec-body .keyword ul li{display:inline-block; font-size:18px; color:#595959; padding-right:12px; margin-top:60px;}
+.sec-body .keyword{margin-top:60px; line-height:1.5;}
+.sec-body .keyword ul li{display:inline-block; font-size:18px; color:#595959; padding-right:12px;}
 
 
 
@@ -689,7 +693,7 @@
         margin: 50px auto;
     }
     .fcdetail-tabpanel .sec .sec-header {
-        margin: 40px 0;
+        margin: 0 0 40px;
         text-align: center;
         font-size: 35px;
         color: #595959;
@@ -832,19 +836,15 @@
     .fcdetail-wrap .facil-wrap {
         padding: 0;
     }
+    
+    .sec-sub.amenity .item+.item{margin-left:9px;}
+
 } /* ~1432 */
 
 /* 21.07.07 추가 */
 @media (max-width: 1431px) {
     .sec-sub.amenity .item{display:block; margin-top:30px;}
     .sec-top .info_box{top:27px;}
-    .sec-top .info_box .txt_wrap{font-size:15px;}
-    .sec-top .info_box .txt_wrap .locate{font-size:13px;}
-    .sec-top .info_box .txt_wrap .locate span{font-size:16px;}
-    .sec-top .info_box .txt_wrap h2{font-size:30px;}
-    .sec-top .info_box ul li{font-size:16px;}
-    .sec-top .info_box .btn-rsv{font-size:22px;}
-    .sec-top .info_box .btn-rsv:before{top:27px;}
     .sec-sub.amenity .item dt{font-size:18px;}
     .sec-sub.amenity .item .item_list li .cate{font-size:15px;}
     .sec-body .keyword ul li{font-size:15px;}
@@ -1303,7 +1303,7 @@
         margin: 50px auto;
     }
     .fcdetail-tabpanel .sec .sec-header {
-        margin: 40px 0;
+        margin: 0 0 40px;
         text-align: center;
         font-size: 30px;
         color: #595959;
@@ -1450,6 +1450,15 @@
     .notice-txt li:last-child:before {
         top: 13px;
     }
+
+    /* 21.07.09 추가 */
+    .sec-top .info_box .txt_wrap{font-size:15px;}
+    .sec-top .info_box .txt_wrap .locate{font-size:13px;}
+    .sec-top .info_box .txt_wrap .locate span{font-size:16px;}
+    .sec-top .info_box .txt_wrap h2{font-size:30px;}
+    .sec-top .info_box ul li{font-size:16px;}
+    .sec-top .info_box .btn-rsv{font-size:22px;}
+    .sec-top .info_box .btn-rsv:before{top:27px;}
 } /* 1431 ~ 992 */
 
 @media (max-width: 992px) {
@@ -1475,8 +1484,7 @@
     /* 21.07.07 추가 */
     .sec-top .info_box{position:static; background:rgba(237,247,255,1);}
     .sec-sub.amenity .item dt{margin-bottom: 8px;}
-    .sec-sub.amenity .item .item_list li{width:105px; height:130px; padding:10px 0;}
-    .sec-sub.amenity .item .item_list li .ico img{transform: scale(.7);}
+    .sec-sub.amenity .item .item_list li{margin:0 2px 5px;}
     .sec-sub .img_wrap{margin:20px 0 50px;}
 }
 
@@ -1935,7 +1943,7 @@
         margin: 25px auto;
     }
     .fcdetail-tabpanel .sec .sec-header {
-        margin: 40px 0 25px;
+        margin: 18px 0 25px;
         text-align: center;
         font-size: 20px;
         color: #595959;
@@ -2664,7 +2672,7 @@
         margin: 15px auto;
     }
     .fcdetail-tabpanel .sec .sec-header {
-        margin: 20px 0 5px;
+        margin: 15px 0 5px;
         text-align: center;
         font-size: 15px;
         color: #595959;
@@ -2915,19 +2923,12 @@
 
 
     /* 21.07.07 추가 */
-    .sec-top .info_box{padding:20px;}
-    .sec-top .info_box .txt_wrap{padding:0 8px 15px; margin-bottom:15px;}
-    .sec-top .info_box .txt_wrap .locate span{font-size:14px;}
-    .sec-top .info_box .txt_wrap h2{font-size:22px; margin:10px 0;}
-    .sec-top .info_box ul li{font-size:13px;}
-    .sec-top .info_box .btn-rsv{font-size:16px; padding:15px 0;}
-    .sec-top .info_box .btn-rsv:before{width:8px; top:20px;}
-
-    .sec-sub.amenity .item dt{font-size:15px;}
-    .sec-sub.amenity .item .item_list li{width:80px; height:105px; padding:5px 0 0; margin-bottom:5px;}
-    .sec-top .info_box .txt_wrap{font-size:13px;}
-    .sec-sub.amenity .item .item_list li .cate{font-size:13px; margin-top:5px;}
-    .sec-body .keyword ul li{font-size:13px; margin-top:30px;}
+    .fcdetail-tabpanel .sec .sec-body .sec-sub.amenity{text-align:left;}
+    .sec-top .info_box .txt_wrap h2{font-size:36px; margin:8px 0 12px;}
+    
+    .sec-body .keyword{margin-top:30px;}
+    .sec-body .keyword ul li{font-size:13px;}
+    
 } /* 767~ */
 
 @media (max-width: 425px) {
@@ -2951,15 +2952,27 @@
     }
 
     /* 21.07.07 추가 */
-    .sec-top .info_box .txt_wrap .locate,
-    .sec-top .info_box .txt_wrap,
-    .sec-top .info_box ul li,
-    .sec-sub.amenity .item .item_list li .cate{font-size:12px;}
-    .sec-top .info_box .txt_wrap h2{font-size:18px;}
-    .sec-top .info_box .btn-rsv{margin-top:15px;}
+    .sec-top .info_box{padding:22px 22px 18px;}
+    .sec-top .info_box .txt_wrap{font-size:15px; padding:0 5px 20px; margin-bottom:20px;}
+    .sec-top .info_box .txt_wrap .locate{font-size:14px;}
+    .sec-top .info_box .txt_wrap .locate span{font-size:18px;}
+    .sec-top .info_box .txt_wrap h2{font-size:30px;}
+    .sec-top .info_box ul li{font-size:16px; margin-bottom:8px;}
+    .sec-top .info_box .btn-rsv{padding:15px 0; font-size:20px;}
+
     .sec-sub.amenity .item{margin-top:20px;}
+    .sec-sub.amenity .item .item_list li{width:23%; height:120px; padding:15px 0 12px;}
+    .sec-sub.amenity .item .item_list li .ico img{transform:scale(.8);}
+    .sec-sub.amenity .item .item_list li .cate{font-size:14px; margin-top:10px;}
 
 } /* 425~ */
+
+/* 21.07.09 추가 */
+@media (max-width: 360px) {
+    .sec-sub.amenity .item .item_list li{height:110px; padding:10px 0 12px;}
+    .sec-sub.amenity .item .item_list li .ico img{transform:scale(.7);}
+    .sec-sub.amenity .item .item_list li .cate{font-size:13px; margin-top:6px;}
+} 
 
 @media (max-width: 320px) {
     .title .facil-tab {
@@ -2968,4 +2981,15 @@
     .title .facil-tab > li a {
         font-size: 14px;
     }
+
+    /* 21.07.09 추가 */
+    .sec-top .info_box{padding:22px 18px 18px;}
+    .sec-top .info_box .txt_wrap h2{font-size:25px;}
+    .sec-top .info_box .txt_wrap .locate span{font-size:16px;}
+    .sec-top .info_box ul li{font-size:15px; margin-bottom:4px;}
+    .sec-top .info_box .txt_wrap br,
+    .sec-top .info_box ul li br{display:none;}
+    .sec-top .info_box .btn-rsv{margin-top:20px;}
+
+    .sec-sub.amenity .item .item_list li .cate{font-size:12px;}
 } /* 320~ */
