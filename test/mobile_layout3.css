@@ -11,14 +11,18 @@ a:hover, a:active {text-decoration:none; color:#ff6600}
 
 body, html {margin:0; width:100%; height:100%}
 
-
 /* 모바일예약페이지 부대시설 추가 */
-
-
 @media (max-width: 767px) {
-    .vari-wrap .ul1 > li a { min-height: 205px; }
-.vari-wrap .ul1 > li a .variImg img {max-width: 100%;}
+    .vari-wrap { float: left; padding: 0 !important; margin: 25px 0 30px;}
+    .vari-wrap .container {padding-top: 0 !important; border-top: 0 none !important;}
+    .vari-wrap .ul1 > li a h4, .vari-wrap .ul1 > li a .p1, .vari-wrap .ul1 > li a .i-scut, .vari-wrap .btn-service {font-family: 'Noto Sans KR';}
+    .vari-wrap .ul1 {display: flex; flex-wrap: wrap;}
+    .vari-wrap .ul1 > li {float: none;}
+    .vari-wrap .ul1 > li a { min-height: auto !important; height: auto;}
+    .vari-wrap .ul1 > li a .variImg {max-width: 100%;}  
+    .vari-wrap .btn-service {display: block; margin-top: 10px; width: 100%; height: 45px; border-radius: 5px; text-align: center; line-height: 45px; background: #44a8ff; color: #fff;}
 }
+
 
 
 
@@ -519,7 +523,7 @@ background:url(http://img.ocean2you.co.kr/go/mobile/check_box_normal.jpg) no-rep
 #checkbox .chk{position:absolute; z-index:-1; opacity:0}
 #checkbox .chk:checked+label{background-position:0 -20px}
 
-#reserve_complete{float:left; width:100%; height:142px; background-color:#ffedd7}
+#reserve_complete{float:left; padding: 0 5px 10px; width:100%; height: auto; box-sizing: border-box; background-color:#ffedd7}
 #reserve_complete p{text-align:center; font-size:14px; line-height:1.3; margin-top:12px}
 #reserve_complete p .orange20{font-size:20px; font-weight:bold; color:#f15d28; line-height:1.7;}
 #reserve_complete p .black18{font-size:17px; color:#3f3f3f; line-height:2;}
