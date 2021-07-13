@@ -23,8 +23,12 @@ body, html {margin:0; width:100%; height:100%}
     .vari-wrap .btn-service {display: block; margin-top: 10px; width: 100%; height: 45px; border-radius: 5px; text-align: center; line-height: 45px; background: #44a8ff; color: #fff;}
 }
 
-
-
+/* 모바일 예약 결제페이지 */
+#pay_reserInfo_wrpa .pay_room {padding-top: 5px; padding-bottom: 15px;}
+#pay_reserInfo_wrpa .pay_room .p_rom_list {float: none; padding-left: 1rem; width: 100%;}
+#pay_reserInfo_wrpa .pay_room .p_rom_list ul li {font-size: 13px;}
+#pay_reserInfo_wrpa .pay_room .p_rom_list .pay_tit {font-size: 15px;}
+#pay_reserInfo_wrpa #reserInfo_title.type2 {height: 5px;}
 
 
 #wrapper{width:100%; min-width:320px; height:100%}
