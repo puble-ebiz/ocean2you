@@ -319,12 +319,12 @@
         letter-spacing: -1px;
     }
     
-    /* 21.07.15 추가 */
+    /* 21.07.20 수정 */
     .pkg-14 .ul-box .ul0-1 li.i-d{
         margin-top:3px;
     }
     .pkg-14 .ul-box .ul0-1 li.mt{
-        margin-top:15px;
+        margin-top:18px;
     }
 
     .pkg-wrap .ul-box .ul0-1 .i-s {
@@ -1061,9 +1061,9 @@
         letter-spacing: -1px;
     }
 
-    /* 21.07.15 추가 */
+    /* 21.07.20 수정 */
     .pkg-14 .ul-box .ul0-1 li.mt{
-        margin-top:15px;
+        margin-top:18px;
     }
 
     .pkg-wrap .ul-box .ul0-1 .i-s {
@@ -1701,6 +1701,19 @@
         color: #373737;
     }
 
+    
+    /* 21.07.20 추가 */  
+    .pkg-14 .box_wrap .ul-box.wd-il{
+        float:left;
+        width:50%;        
+    }
+    .pkg-14 .box_wrap:after{
+        content:'';
+        display:block;
+        clear:both;
+    }
+
+
     /* 180425 이미지 리스트_다솜 */
     .pkg-wrap .pkg-img-list li {
         box-sizing: border-box;
@@ -1785,6 +1798,12 @@
     .pkg-wrap .ul-box .ul0-1 ul li:first-child {
         margin-top: 5px;
     }
+
+    /* 21.07.20 추가 */
+    .pkg-14 .ul-box .ul0-1 li.mt{
+        margin-top:25px;
+    }
+
     .pkg-wrap .ul-box .ul0-1.li-left li {
         /*float:left; width:50%;*/
         margin-top: 20px;
@@ -2606,6 +2625,24 @@
     .pkg-14 .ul-box .ul0-1 li p{
         font-size:16px;
     }
+
+    /* 21.07.20 추가 */
+    .pkg-14 .ul-box .ul0-1 li.mt{
+        margin-top:25px;
+    }
+    .pkg-14 .box_wrap .ul-box.wd-il{
+        float:left;
+        width:50%;        
+    }
+    .pkg-14 .box_wrap:after{
+        content:'';
+        display:block;
+        clear:both;
+    }
+
+
+
+
 
 
     .pkg-wrap .ul-box .ul0-1 ul li:first-child {
