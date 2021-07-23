@@ -2572,6 +2572,10 @@
         top: 0;
         background: #44a8ff;
     }
+    
+    /* 21.07.23 추가 */
+    .pkg-6 .ul-box{width:48%;}
+
     .pkg-wrap .ul-box.wd-full {
         clear: both;
         width: 100%;
