@@ -44,13 +44,14 @@
     .title .tit-box .titTxt img {
         width: 310px;
     }
+    /* 21.07.15 수정 */
     .title .pkg-tab {
         position: relative;
         box-sizing: border-box;
         margin: 22px auto 0;
         min-width: 310px;
         max-width: 360px;
-        left: 1.5px;
+        left:0;
     }
     .title .pkg-tab > li {
         position: relative;
@@ -317,6 +318,15 @@
         line-height: 17px;
         letter-spacing: -1px;
     }
+    
+    /* 21.07.20 수정 */
+    .pkg-14 .ul-box .ul0-1 li.i-d{
+        margin-top:3px;
+    }
+    .pkg-14 .ul-box .ul0-1 li.mt{
+        margin-top:18px;
+    }
+
     .pkg-wrap .ul-box .ul0-1 .i-s {
         position: relative;
         padding-left: 13px;
@@ -1050,6 +1060,12 @@
         line-height: 17px;
         letter-spacing: -1px;
     }
+
+    /* 21.07.20 수정 */
+    .pkg-14 .ul-box .ul0-1 li.mt{
+        margin-top:18px;
+    }
+
     .pkg-wrap .ul-box .ul0-1 .i-s {
         position: relative;
         padding-left: 18px;
@@ -1685,6 +1701,19 @@
         color: #373737;
     }
 
+    
+    /* 21.07.20 추가 */  
+    .pkg-14 .box_wrap .ul-box.wd-il{
+        float:left;
+        width:50%;        
+    }
+    .pkg-14 .box_wrap:after{
+        content:'';
+        display:block;
+        clear:both;
+    }
+
+
     /* 180425 이미지 리스트_다솜 */
     .pkg-wrap .pkg-img-list li {
         box-sizing: border-box;
@@ -1769,6 +1798,12 @@
     .pkg-wrap .ul-box .ul0-1 ul li:first-child {
         margin-top: 5px;
     }
+
+    /* 21.07.20 추가 */
+    .pkg-14 .ul-box .ul0-1 li.mt{
+        margin-top:25px;
+    }
+
     .pkg-wrap .ul-box .ul0-1.li-left li {
         /*float:left; width:50%;*/
         margin-top: 20px;
@@ -2537,6 +2572,10 @@
         top: 0;
         background: #44a8ff;
     }
+    
+    /* 21.07.23 추가 */
+    .pkg-6 .ul-box{width:48%;}
+
     .pkg-wrap .ul-box.wd-full {
         clear: both;
         width: 100%;
@@ -2584,6 +2623,32 @@
     .pkg-wrap .ul-box .ul0-1 li:first-child {
         margin-top: 0;
     }
+
+     /* 21.07.15 추가 */
+    .pkg-14 .ul-box .ul0-1 li,
+    .pkg-14 .ul-box .ul0-1 li p{
+        font-size:16px;
+    }
+
+    /* 21.07.20 추가 */
+    .pkg-14 .ul-box .ul0-1 li.mt{
+        margin-top:25px;
+    }
+    .pkg-14 .box_wrap .ul-box.wd-il{
+        float:left;
+        width:50%;        
+    }
+    .pkg-14 .box_wrap:after{
+        content:'';
+        display:block;
+        clear:both;
+    }
+
+
+
+
+
+
     .pkg-wrap .ul-box .ul0-1 ul li:first-child {
         margin-top: 5px;
     }
