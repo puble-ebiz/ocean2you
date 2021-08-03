@@ -29,7 +29,11 @@
         <div class="vid-wrap">
 
             @@include('../include/_header.html')
-
+            <style>
+                .vid-wrap {
+                    height: auto;
+                }
+            </style>
             <section class="title">
                 <div class="container tit-box">
                     <h2>오션투유 리조트 소개</h2>
@@ -37,24 +41,20 @@
                     <div class="titTxt">
                         <img src="http://img.ocean2you.co.kr/renew/intro/intro_title.png" alt="오션투유리조트소개">
                     </div>
-                    <!-- 2021.06.15 텍스트 삭제 -->
-                    <!-- <p class="p0">반짝이는 백사장 위로 쏟아지는 별빛을 볼 수 있는 오션투유 리조트로 초대합니다.</p> -->
-                    <!-- //2021.06.15 텍스트 삭제 -->
-                    <!-- 2021.05.31 오션투유 소개 탭메뉴 추가 -->
                     <div class="intro-menu">
                         <a href="#none" class="active">오션투유 소개</a>
                         <a href="#none">고객리뷰</a>
+
                         <a href="#none">공지사항</a>
-                        <!-- 2021.06.15 주차안내 추가 -->
                         <a href="#none">주차안내</a>
-                        <!-- //2021.06.15 주차안내 추가 -->
+                        <!--21.07.22-->
+                        <a href="#none">오시는길</a>
                     </div>
-                    <!-- //2021.05.31 오션투유 소개 탭메뉴 추가 -->
                 </div>
             </section>
         </div>
 
-        <!-- 2021.05.31 소개 내용 탭형식 추가 -->
+        <!--소개cont-->
         <div class="intro-cont">
             <div class="introSection tabFirst">
                 <!-- 오션투유 소개 -->
@@ -264,7 +264,6 @@
                 </section>
                 <!-- //공지사항 -->
             </div>
-            <!-- 2021.06.15 주차장 섹션 추가 -->
             <div class="introSection">
                 <section class="parking" id="parking">
                     <div class="container">
@@ -302,7 +301,224 @@
                     </div>
                 </section>
             </div>
-            <!-- //2021.06.15 주차장 섹션 추가 -->
+            <!--21.07.22-->
+            <div class="introSection">
+                <section class="wayto" id="wayto">
+                    <div class="container">
+                        <div class="intro-tit">
+                            <h4>오시는길</h4>
+                            <p>강원도 설악, 속초, 고성에 위치한 오션투유 리조트 위치안내</p>
+                        </div>
+                        <div class="map-box">
+
+                            <!-- <div id="daumRoughmapContainer1626999971240"
+                                class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+                            <script charset="UTF-8" class="daum_roughmap_loader_script"
+                                src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+                            <script charset="UTF-8">
+                                new daum.roughmap.Lander({
+                                    "timestamp": "1626999971240",
+                                    "key": "26qcn",
+                                    "mapWidth": "500",
+                                    "mapHeight": "515"
+                                }).render();
+                            </script> -->
+                            <div class="map" id="map"
+                                style="position: relative; overflow: hidden; background: url(&quot;http://t1.daumcdn.net/mapjsapi/images/bg_tile.png&quot;);">
+                                <div
+                                    style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; touch-action: none; cursor: url(&quot;http://t1.daumcdn.net/mapjsapi/images/cursor/openhand.cur.ico&quot;) 7 5, url(&quot;http://t1.daumcdn.net/mapjsapi/images/cursor/openhand.cur.ico&quot;), default;">
+                                    <div style="position: absolute;">
+                                        <div style="position: absolute; z-index: 1; left: 0px; top: 0px;"><img
+                                                src="http://map0.daumcdn.net/map_2d/2106wof/L3/2328/1420.png" alt=""
+                                                draggable="false"
+                                                style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: -127px; top: 345px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                                src="http://map1.daumcdn.net/map_2d/2106wof/L3/2328/1421.png" alt=""
+                                                draggable="false"
+                                                style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 129px; top: 345px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                                src="http://map2.daumcdn.net/map_2d/2106wof/L3/2328/1422.png" alt=""
+                                                draggable="false"
+                                                style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 385px; top: 345px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                                src="http://map0.daumcdn.net/map_2d/2106wof/L3/2329/1420.png" alt=""
+                                                draggable="false"
+                                                style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: -127px; top: 89px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                                src="http://map1.daumcdn.net/map_2d/2106wof/L3/2329/1421.png" alt=""
+                                                draggable="false"
+                                                style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 129px; top: 89px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                                src="http://map2.daumcdn.net/map_2d/2106wof/L3/2329/1422.png" alt=""
+                                                draggable="false"
+                                                style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 385px; top: 89px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                                src="http://map0.daumcdn.net/map_2d/2106wof/L3/2330/1420.png" alt=""
+                                                draggable="false"
+                                                style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: -127px; top: -167px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                                src="http://map1.daumcdn.net/map_2d/2106wof/L3/2330/1421.png" alt=""
+                                                draggable="false"
+                                                style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 129px; top: -167px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                                src="http://map2.daumcdn.net/map_2d/2106wof/L3/2330/1422.png" alt=""
+                                                draggable="false"
+                                                style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 385px; top: -167px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                                src="http://map0.daumcdn.net/map_2d/2106wof/L3/2331/1420.png" alt=""
+                                                draggable="false"
+                                                style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: -127px; top: -423px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                                src="http://map1.daumcdn.net/map_2d/2106wof/L3/2331/1421.png" alt=""
+                                                draggable="false"
+                                                style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 129px; top: -423px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                                src="http://map2.daumcdn.net/map_2d/2106wof/L3/2331/1422.png" alt=""
+                                                draggable="false"
+                                                style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 385px; top: -423px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;">
+                                        </div>
+                                        <div style="position: absolute; z-index: 0; left: 0px; top: 0px;"><img
+                                                src="http://map3.daumcdn.net/map_2d/2106wof/L7/144/87.png" alt=""
+                                                draggable="false"
+                                                style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: -224px; top: 407px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                                src="http://map0.daumcdn.net/map_2d/2106wof/L7/144/88.png" alt=""
+                                                draggable="false"
+                                                style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 32px; top: 407px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                                src="http://map1.daumcdn.net/map_2d/2106wof/L7/144/89.png" alt=""
+                                                draggable="false"
+                                                style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 288px; top: 407px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                                src="http://map3.daumcdn.net/map_2d/2106wof/L7/145/87.png" alt=""
+                                                draggable="false"
+                                                style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: -224px; top: 151px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                                src="http://map0.daumcdn.net/map_2d/2106wof/L7/145/88.png" alt=""
+                                                draggable="false"
+                                                style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 32px; top: 151px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                                src="http://map1.daumcdn.net/map_2d/2106wof/L7/145/89.png" alt=""
+                                                draggable="false"
+                                                style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 288px; top: 151px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                                src="http://map3.daumcdn.net/map_2d/2106wof/L7/146/87.png" alt=""
+                                                draggable="false"
+                                                style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: -224px; top: -105px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                                src="http://map0.daumcdn.net/map_2d/2106wof/L7/146/88.png" alt=""
+                                                draggable="false"
+                                                style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 32px; top: -105px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                                src="http://map1.daumcdn.net/map_2d/2106wof/L7/146/89.png" alt=""
+                                                draggable="false"
+                                                style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 288px; top: -105px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                                src="http://map3.daumcdn.net/map_2d/2106wof/L7/147/87.png" alt=""
+                                                draggable="false"
+                                                style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: -224px; top: -361px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                                src="http://map0.daumcdn.net/map_2d/2106wof/L7/147/88.png" alt=""
+                                                draggable="false"
+                                                style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 32px; top: -361px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                                src="http://map1.daumcdn.net/map_2d/2106wof/L7/147/89.png" alt=""
+                                                draggable="false"
+                                                style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 288px; top: -361px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;">
+                                        </div>
+                                        <div style="position: absolute; z-index: 1;"></div>
+                                        <div style="position: absolute; z-index: 1; width: 494px; height: 517px;"></div>
+                                        <div style="position: absolute; z-index: 1;"><svg version="1.1"
+                                                style="stroke: none; stroke-dashoffset: 0.5; stroke-linejoin: round; fill: none; transform: translateZ(0px); position: absolute; left: -988px; top: -1034px; width: 2470px; height: 2585px;"
+                                                viewBox="0 0 2470 2585">
+                                                <defs></defs>
+                                            </svg></div>
+                                        <div
+                                            style="position: absolute; z-index: 1; width: 100%; height: 0px; transform: translateZ(0px);">
+                                            <div
+                                                style="position: absolute; margin: -39px 0px 0px -14px; z-index: 0; left: 247px; top: 258px; display: block;">
+                                                <img draggable="false"
+                                                    src="http://t1.daumcdn.net/mapjsapi/images/marker.png" alt=""
+                                                    title=""
+                                                    style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(0px, 29px, 42px, 0px); top: 0px; left: 0px; width: 29px; height: 42px;"><img
+                                                    src="http://t1.daumcdn.net/mapjsapi/images/transparent.gif" alt=""
+                                                    draggable="false" usemap="#daum.maps.Marker.Area:1"
+                                                    style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; width: 29px; height: 42px;"><map
+                                                    id="daum.maps.Marker.Area:1" name="daum.maps.Marker.Area:1"><area
+                                                        href="javascript:void(0)" alt="" shape="poly"
+                                                        coords="14,39,9,27,4,21,1,16,1,10,4,4,11,0,18,0,25,4,28,10,28,16,25,21,20,27"
+                                                        title=""
+                                                        style="-webkit-tap-highlight-color: transparent;"></map>
+                                            </div>
+                                            <div
+                                                style="cursor: default; position: absolute; background: rgb(255, 255, 255); border: 1px solid rgb(118, 129, 168); z-index: 0; display: block; width: 150px; height: 23px; left: 172px; top: 187px;">
+                                                <div
+                                                    style="position: absolute; width: 11px; height: 9px; background: url(&quot;http://t1.daumcdn.net/localimg/localimages/07/mapjsapi/triangle.png&quot;) 0% 0% / 11px 9px no-repeat; left: 69px; top: 23px;">
+                                                </div>
+                                                <div class="" style="position: absolute; left: 0px; top: 0px;">
+                                                    <div style="text-align:center; font-size:11px; padding:5px;">오션투유리조트
+                                                        호텔앤콘도</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    style="position: absolute; cursor: default; z-index: 1; margin: 0px 6px; height: 19px; line-height: 14px; left: 0px; bottom: 0px; color: rgb(0, 0, 0);">
+                                    <div style="color: rgb(0, 0, 0); text-align: center; font-size: 10px; float: left;">
+                                        <div
+                                            style="float: left; margin: 2px 3px 0px 4px; height: 6px; transition: width 0.1s ease 0s; border-top: none rgb(0, 0, 0); border-right: 2px solid rgb(0, 0, 0); border-bottom: 2px solid rgb(0, 0, 0); border-left: 2px solid rgb(0, 0, 0); border-image: initial; width: 46px;">
+                                        </div>
+                                        <div
+                                            style="float: left; margin: 0px 4px 0px 0px; font-family: AppleSDGothicNeo-Regular, 돋움, dotum, sans-serif; font-weight: bold; color: rgb(0, 0, 0);">
+                                            50m</div>
+                                    </div>
+                                    <div style="margin: 0px 4px; float: left;"><a target="_blank"
+                                            href="http://map.kakao.com/" title="Kakao 지도로 보시려면 클릭하세요."
+                                            style="float: left; width: 32px; height: 10px;"><img
+                                                src="http://t1.daumcdn.net/mapjsapi/images/m_bi_b.png"
+                                                alt="Kakao 지도로 이동"
+                                                style="float: left; width: 32px; height: 10px; border: none;"></a>
+                                        <div style="font: 11px / 11px Arial, Tahoma, Dotum, sans-serif; float: left;">,
+                                            국토지리정보원, OpenStreetMap</div>
+                                    </div>
+                                </div>
+                                <div style="cursor: auto; position: absolute; z-index: 2; left: 0px; top: 0px;">
+                                    <div
+                                        style="width: 32px; border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 2px 0px; position: absolute; left: 460px; top: 3px;">
+                                        <button draggable="false" title="확대" type="button"
+                                            style="float: left; cursor: pointer; width: 32px; height: 32px; user-select: none; -webkit-user-drag: none; border-top: none; border-right: none; border-bottom: 1px solid rgb(226, 226, 226); border-left: none; border-image: initial; background: url(&quot;http://t1.daumcdn.net/mapjsapi/images/control.png&quot;) -40px 0px / 116px 264px no-repeat rgb(255, 255, 255); border-radius: 3px 3px 0px 0px;"></button>
+                                        <div
+                                            style="float: left; background: url(&quot;http://t1.daumcdn.net/mapjsapi/images/bg_zoom_control.png&quot;) repeat; padding: 7px 0px; transition: height 0s ease 0s, margin 0.1s ease 0s;">
+                                            <div
+                                                style="cursor: pointer; position: relative; background-size: 116px 264px; transition: height 0.1s ease 0s; margin: 2px 0px; display: block; width: 32px; height: 104px;">
+                                                <div
+                                                    style="position: absolute; width: 4px; height: 100%; background-color: rgb(51, 150, 255); left: 50%; margin: 0px 0px 0px -2px;">
+                                                    <div
+                                                        style="width: 4px; height: 2px; margin-bottom: -2px; bottom: 0px; position: absolute; background: url(&quot;http://t1.daumcdn.net/mapjsapi/images/control.png&quot;) -50px -127px / 116px 264px;">
+                                                    </div>
+                                                    <div
+                                                        style="width: 4px; height: 2px; margin-top: -2px; top: 0px; position: absolute; background: url(&quot;http://t1.daumcdn.net/mapjsapi/images/control.png&quot;) -40px -100px / 116px 264px;">
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    style="position: absolute; background-color: rgb(204, 204, 204); transition: height 0.1s ease 0s; left: 50%; margin: 0px 0px 0px -2px; width: 4px; height: 16px;">
+                                                </div>
+                                                <div
+                                                    style="cursor: row-resize; position: absolute; width: 20px; height: 10px; margin: -4px 0px 0px -10px; background: url(&quot;http://t1.daumcdn.net/mapjsapi/images/control.png&quot;) -40px -80px / 116px 264px; left: 50%; transition: top 0.1s ease 0s; top: 16px;">
+                                                </div>
+                                            </div>
+                                        </div><button draggable="false" title="축소" type="button"
+                                            style="float: left; cursor: pointer; width: 32px; height: 32px; user-select: none; -webkit-user-drag: none; border-top: 1px solid rgb(226, 226, 226); border-right: none; border-bottom: none; border-left: none; border-image: initial; background: url(&quot;http://t1.daumcdn.net/mapjsapi/images/control.png&quot;) -40px -32px / 116px 264px no-repeat rgb(255, 255, 255); border-radius: 0px 0px 3px 3px; margin: 0px;"></button>
+                                        <div
+                                            style="position: absolute; margin: 41px 0px 0px -30px; background-size: 116px 264px; width: 30px; height: 104px; display: none;">
+                                            <div
+                                                style="position: absolute; width: 29px; height: 15px; margin: -6px 0px 0px; background: url(&quot;http://t1.daumcdn.net/mapjsapi/images/control.png&quot;) 0px -80px / 116px 264px; left: 0px; top: 8px;">
+                                            </div>
+                                            <div
+                                                style="position: absolute; width: 29px; height: 15px; margin: -6px 0px 0px; background: url(&quot;http://t1.daumcdn.net/mapjsapi/images/control.png&quot;) 0px -100px / 116px 264px; left: 0px; top: 32px;">
+                                            </div>
+                                            <div
+                                                style="position: absolute; width: 29px; height: 15px; margin: -6px 0px 0px; background: url(&quot;http://t1.daumcdn.net/mapjsapi/images/control.png&quot;) 0px -120px / 116px 264px; left: 0px; top: 64px;">
+                                            </div>
+                                            <div
+                                                style="position: absolute; width: 29px; height: 15px; margin: -6px 0px 0px; background: url(&quot;http://t1.daumcdn.net/mapjsapi/images/control.png&quot;) 0px -140px / 116px 264px; left: 0px; top: 80px;">
+                                            </div>
+                                            <div
+                                                style="position: absolute; width: 29px; height: 15px; margin: -6px 0px 0px; background: url(&quot;http://t1.daumcdn.net/mapjsapi/images/control.png&quot;) 0px -160px / 116px 264px; left: 0px; top: 96px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="map-info">
+                                <p>자가 차량 이용시</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!--//21.07.22-->
         </div>
 
         <script>

@@ -58,7 +58,7 @@
   padding-left: 22px;
 }
 .notice-pet li:before {
-  content: "��";
+  content: "※";
   color: #2a74b6;
 }
 .notice-txt {
@@ -333,7 +333,6 @@
   }
   .title .facil-tab {
     display: flex;
-    justify-content: center;
     margin: 0 auto;
     width: 1180px;
   }
@@ -588,7 +587,7 @@
     position: relative;
     left: 9px;
     top: -3px;
-    content: "��";
+    content: "▶";
     font-size: 16px;
   }
   #facil-box > section .d-area-2 a:after {
@@ -875,7 +874,7 @@
     letter-spacing: -0.5px;
   }
   .fcdetail-tabpanel .sec .sec-body .sec-notice .list .dot-1:before {
-    content: "쨌";
+    content: "·";
     display: inline-block;
     position: absolute;
     left: 0;
@@ -1468,7 +1467,7 @@
     letter-spacing: -0.5px;
   }
   .fcdetail-tabpanel .sec .sec-body .sec-notice .list .dot-1:before {
-    content: "쨌";
+    content: "·";
     display: inline-block;
     position: absolute;
     left: 0;
@@ -2112,7 +2111,7 @@
     letter-spacing: -0.5px;
   }
   .fcdetail-tabpanel .sec .sec-body .sec-notice .list .dot-1:before {
-    content: "쨌";
+    content: "·";
     display: inline-block;
     position: absolute;
     left: 0;
@@ -2836,7 +2835,7 @@
     letter-spacing: -0.5px;
   }
   .fcdetail-tabpanel .sec .sec-body .sec-notice .list .dot-1:before {
-    content: "쨌";
+    content: "·";
     display: inline-block;
     position: absolute;
     left: 0;
